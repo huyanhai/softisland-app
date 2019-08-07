@@ -1,7 +1,5 @@
 # softisland-app
 
-> game-app
-
 ## Build Setup
 
 ```bash
