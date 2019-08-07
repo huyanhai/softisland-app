@@ -68,11 +68,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@import "../assets/scss/index";
 .hello {
   color: red;
   filter: (5px);
   a {
-    color: darkblue;
+    color: $color-fff;
   }
 }
 </style>
