@@ -6,6 +6,8 @@ import router from './router'
 import Vant from 'vant'
 import 'vant/lib/index.css'
 import axios from '../services/axios'
+import 'normalize.css'
+import 'amfe-flexible'
 
 Vue.prototype.$ajax = axios
 Vue.use(Vant)

@@ -72,8 +72,10 @@ export default {
 .hello {
   color: red;
   filter: (5px);
+  border: 1px solid #dedede;
   a {
     color: $color-fff;
+    font-size: 60px;
   }
 }
 </style>

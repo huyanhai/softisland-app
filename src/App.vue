@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <transition name='transitionRouter' mode='out-in'>
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -10,14 +11,13 @@ export default {
   name: 'App'
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+.transitionRouter-enter-active,
+.transitionRouter-leave-active {
+  transition: all 0.4s;
+}
+.transitionRouter-enter,
+.transitionRouter-leave {
+  transform: translate3d(100%, 0, 0);
 }
 </style>
