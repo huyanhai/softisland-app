@@ -1,8 +1,8 @@
 <!--
  * @Description:
- * @Author: huyanhai
+ * @Author: hyh
  * @since: 2019-08-08 22:26:05
- * @lastTime: 2019-08-10 21:51:51
+ * @lastTime: 2019-08-11 10:58:08
  -->
 <template>
   <van-tabbar v-model="active" class="footer-tab-bar" :active-color="activeColor" :inactive-color="inactiveColor" safe-area-inset-bottom>
