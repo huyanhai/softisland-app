@@ -1,0 +1,27 @@
+/*
+ * @Description: 全局公共样式
+ * @Author: hyh
+ * @since: 2019-08-08 15:09:50
+ * @lastTime: 2019-08-10 20:50:03
+ */
+
+body {
+  background: $line-gary;
+  overflow-x: hidden;
+}
+html,
+body,
+#app {
+  height: 100%;
+}
+.pages {
+  padding-bottom: 120px;
+}
+
+.cborder {
+  border: 1px solid $brand-red;
+}
+.van-dialog__confirm,
+.van-dialog__confirm:active {
+  color: $brand-red;
+}

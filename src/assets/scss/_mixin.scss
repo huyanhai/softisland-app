@@ -1,0 +1,25 @@
+/*
+ * @Description: scss方法库
+ * @Author: hyh
+ * @since: 2019-08-07 22:45:06
+ * @lastTime: 2019-08-10 18:45:31
+ */
+
+// 渐变色
+@mixin linder-top-bottom($top: #ff5c38, $bottom: #ff293f, $rang: 0deg) {
+  background: linear-gradient(top, $top, $bottom);
+}
+
+@mixin linder-left-right($left: #ff5c38, $right: #ff293f, $rang: 0deg) {
+  background: linear-gradient(left, $left, $right);
+}
+
+// 圆角
+@mixin border-radius($radius: 4px) {
+  border-radius: $radius;
+}
+
+// 投影
+@mixin box-shdow-gary($shadow-gary: #efefef) {
+  box-shadow: 6px 0 16px $shadow-gary;
+}

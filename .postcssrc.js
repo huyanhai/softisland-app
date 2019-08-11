@@ -1,3 +1,9 @@
+/*
+ * @Description:
+ * @Author: huyanhai
+ * @since: 2019-08-06 22:01:24
+ * @lastTime: 2019-08-09 15:27:32
+ */
 // https://github.com/michael-ciniawsky/postcss-load-config
 
 module.exports = {
@@ -9,8 +15,16 @@ module.exports = {
     // px转rem
     'postcss-pxtorem': {
       rootValue: 75,
-      propList: ['*', '!border*', '!filter*'],
-      selectorBlackList: ['.van-'] // van-的类不转rem
+      propList: [
+        '*',
+        '!box-shadow',
+        '!filter*',
+        '!border-b*',
+        '!border-ri*',
+        '!border-t*',
+        '!border-le*'
+      ],
+      selectorBlackList: ['.van-', 'cborder'] // van-的类不转rem
     }
   }
 }
