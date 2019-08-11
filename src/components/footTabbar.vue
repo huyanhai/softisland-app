@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-08 22:26:05
- * @lastTime: 2019-08-11 10:58:08
+ * @lastTime: 2019-08-11 11:09:08
  -->
 <template>
   <van-tabbar v-model="active" class="footer-tab-bar" :active-color="activeColor" :inactive-color="inactiveColor" safe-area-inset-bottom>
@@ -25,6 +25,27 @@ export default {
   data () {
     return {
       active: 0
+    }
+  },
+  watch: {
+    '$route': function (to, from) {
+      switch (this.$route.path) {
+        case '/':
+          this.active = 0
+          break
+        case '/service':
+          this.active = 1
+          break
+        case '/message':
+          this.active = 2
+          break
+        case '/my':
+          this.active = 3
+          break
+        default:
+          break
+      }
+      console.log(this.$route.path)
     }
   }
 }
