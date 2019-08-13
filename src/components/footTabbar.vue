@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-08 22:26:05
- * @lastTime: 2019-08-11 11:09:08
+ * @lastTime: 2019-08-11 11:10:11
  -->
 <template>
   <van-tabbar v-model="active" class="footer-tab-bar" :active-color="activeColor" :inactive-color="inactiveColor" safe-area-inset-bottom>
@@ -45,7 +45,6 @@ export default {
         default:
           break
       }
-      console.log(this.$route.path)
     }
   }
 }

@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-10 20:51:07
- * @lastTime: 2019-08-10 21:49:27
+ * @lastTime: 2019-08-13 23:22:38
  -->
 <template>
   <div class="pages page-message">
@@ -25,7 +25,7 @@
             <i class="message" v-if="!message">2</i>
           </span>
           <span class="col-r">
-            <p class="name">我的客服</p>
+            <p class="name">我的客户</p>
             <p class="text">
               <em class="num">185XXXX89</em>
               <em class="num">185XXXX89</em>
@@ -60,6 +60,21 @@ export default {
       message: true,
       myMessage: [
         {
+          title: '您的红包即将到期~',
+          time: '2019/7/20 09:27:45',
+          text: '为了回馈大家长期的信任，17369给大家送红包啦！邀请好友赢取高额奖励，还在等什么？赶快......',
+          isRead: true
+        }, {
+          title: '您的红包即将到期~',
+          time: '2019/7/20 09:27:45',
+          text: '为了回馈大家长期的信任，17369给大家送红包啦！邀请好友赢取高额奖励，还在等什么？赶快......',
+          isRead: true
+        }, {
+          title: '您的红包即将到期~',
+          time: '2019/7/20 09:27:45',
+          text: '为了回馈大家长期的信任，17369给大家送红包啦！邀请好友赢取高额奖励，还在等什么？赶快......',
+          isRead: true
+        }, {
           title: '您的红包即将到期~',
           time: '2019/7/20 09:27:45',
           text: '为了回馈大家长期的信任，17369给大家送红包啦！邀请好友赢取高额奖励，还在等什么？赶快......',

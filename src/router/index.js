@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-06 22:01:24
- * @lastTime: 2019-08-10 20:51:56
+ * @lastTime: 2019-08-13 22:36:18
  */
 import Vue from 'vue'
 import Router from 'vue-router'
@@ -66,6 +66,31 @@ export default new Router({
       path: '/message',
       name: 'message',
       component: () => import('../views/message/index.vue')
+    },
+    {
+      path: '/my/mysell',
+      name: 'mysell',
+      component: () => import('../views/mysell/index.vue')
+    },
+    {
+      path: '/my/search',
+      name: 'search',
+      component: () => import('../views/mysell/search.vue')
+    },
+    {
+      path: '/my/exact-search',
+      name: 'exactSearch',
+      component: () => import('../views/mysell/exactSearch.vue')
+    },
+    {
+      path: '/my/search-list',
+      name: 'searchList',
+      component: () => import('../views/mysell/searchList.vue')
+    },
+    {
+      path: '/my/editsell',
+      name: 'editSell',
+      component: () => import('../views/editsell/index.vue')
     }
   ]
 })
