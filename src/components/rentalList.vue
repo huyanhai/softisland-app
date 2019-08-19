@@ -1,70 +1,51 @@
 <!--
- * @Description:sellList
+ * @Description:rentalList
  * @Author: hyh
  * @since: 2019-08-13 21:16:25
- * @lastTime: 2019-08-17 21:30:23
+ * @lastTime: 2019-08-17 20:02:11
  -->
 <template>
-  <div class="sell-list-c">
+  <div class="rental-list-c">
     <span class="col">
-      <p class="col-l text">货架号：{{mysellList.sellNo}}</p>
-      <p class="col-r text al-r">状态：{{mysellList.status}}</p>
+      <p class="col-l text">游戏名称：{{mysellList.gameName}}</p>
+      <p class="col-r text al-r">{{mysellList.time}}</p>
     </span>
     <span class="col-box">
-      <p class="col-list text"><em class="name">游戏：</em>{{mysellList.gameName}}</p>
-      <p class="col-list text"><em class="name">角色名：</em>{{mysellList.roleName}}</p>
-      <p class="col-list text"><em class="name">区服：</em>{{mysellList.serverName}}</p>
-      <p class="col-list text"><em class="name">累计出租收入：</em>{{mysellList.income}}元</p>
-      <p class="col-list text"><em class="name">累计出租次数：</em>{{mysellList.lease}}次</p>
+      <p class="col-list text"><em class="name">游戏账号：</em>{{mysellList.gameAcc}}</p>
+      <p class="col-list text"><em class="name">角色名称：</em>{{mysellList.roleName}}</p>
+      <p class="col-list text"><em class="name">游戏区服：</em>{{mysellList.gameServer}}</p>
+      <p class="line"></p>
+      <p class="col-list text color-red"><em class="name">当前状态：</em>{{status[mysellList.status]}}</p>
+      <p class="col-list text"><em class="name">日期：</em>{{mysellList.date}}</p>
+      <p class="col-list text"><em class="name">分成比例：</em>{{mysellList.ratio}}</p>
     </span>
-    <a class="buy red-btn" @click="buy" v-html="buyText"></a>
-    <a class="edit red-btn" @click="edit">编辑货架</a>
+    <a class="edit cborder active" @click="leveMsg">合租留言</a>
   </div>
 </template>
 <script>
 export default {
-  name: 'sellList',
+  name: 'rentalList',
   props: {
     mysellList: Object
   },
   data () {
     return {
-      buyText: '购买置顶',
-      countDownNumber: 150,
-      btnDisable: false
+      status: {
+        saleing: '出售中',
+        waitSale: '待租'
+      }
     }
   },
   methods: {
-    buy (item, index) {
-      console.log(item, index)
-      if (!this.btnDisable) {
-        this.countDown()
-      }
-      this.$router.push({ path: './buy-top' })
-    },
-    countDown () {
-      this.countDownNumber--
-      this.btnDisable = true
-      const timer = setInterval(() => {
-        if (this.countDownNumber > 0) {
-          this.btnDisable = true
-          this.buyText = `<p class="zd">置顶时长<em class="sm-txt">剩${this.countDownNumber}分钟</em></p>`
-          this.countDownNumber--
-        } else {
-          this.countDownNumber = 150
-          clearInterval(timer)
-        }
-      }, 1000)
-    },
-    edit () {
-      this.$router.push({ path: '/my/editsell' })
+    leveMsg () {
+      this.$router.push({ path: '/my/leave-message' })
     }
   }
 }
 </script>
 <style lang="scss">
 @import "../assets/scss/index";
-.sell-list-c {
+.rental-list-c {
   box-sizing: border-box;
   @include border-radius(40px);
   padding: 0 20px;
@@ -94,15 +75,22 @@ export default {
     margin: 10px 0;
     overflow: hidden;
     display: block;
+    clear: both;
+    .line {
+      border-bottom: 1px solid $line-gary;
+      margin: 20px 0;
+      height: 1px;
+    }
     .col-list {
       width: 100%;
-      float: left;
       font-size: 24px;
       color: $text-dark;
       line-height: 60px;
+      overflow: hidden;
+      height: 60px;
       &:nth-child(1),
       &:nth-child(2) {
-        width: 50%;
+        width: 100%;
       }
       &.text {
         margin: 0;
@@ -110,6 +98,10 @@ export default {
       .name {
         color: $text-lgary;
         font-style: normal;
+      }
+
+      &.color-red {
+        color: $brand-orange;
       }
     }
   }
@@ -123,12 +115,27 @@ export default {
     text-align: center;
     line-height: 60px;
     font-size: 24px;
-    color: $color-fff;
-    background: $brand-red;
+    color: $brand-red;
     @include border-radius(60px);
     display: flex;
     align-items: center;
     justify-content: center;
+    &.active {
+      &::after {
+        display: block;
+      }
+    }
+    &::after {
+      content: "";
+      width: 14px;
+      height: 14px;
+      background: $brand-red;
+      @include border-radius(8px);
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: none;
+    }
     .zd {
       line-height: initial;
       margin: 0;

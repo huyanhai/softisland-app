@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-06 22:01:24
- * @lastTime: 2019-08-13 22:36:18
+ * @lastTime: 2019-08-17 21:11:10
  */
 import Vue from 'vue'
 import Router from 'vue-router'
@@ -73,6 +73,11 @@ export default new Router({
       component: () => import('../views/mysell/index.vue')
     },
     {
+      path: '/my/buy-top',
+      name: 'buyTop',
+      component: () => import('../views/mysell/buyTop.vue')
+    },
+    {
       path: '/my/search',
       name: 'search',
       component: () => import('../views/mysell/search.vue')
@@ -91,6 +96,61 @@ export default new Router({
       path: '/my/editsell',
       name: 'editSell',
       component: () => import('../views/editsell/index.vue')
+    },
+    {
+      path: '/my/choose-game',
+      name: 'chooseGame',
+      component: () => import('../views/editsell/chooseGame.vue')
+    },
+    {
+      path: '/my/choose-address',
+      name: 'chooseAddress',
+      component: () => import('../views/editsell/chooseAddress.vue')
+    },
+    {
+      path: '/my/leave-message',
+      name: 'leaveMessage',
+      component: () => import('../views/together/leaveMessage.vue')
+    },
+    {
+      path: '/my/black-list',
+      name: 'blacklist',
+      component: () => import('../views/blacklist/index.vue')
+    },
+    {
+      path: '/my/complain',
+      name: 'complain',
+      component: () => import('../views/blacklist/complain.vue')
+    },
+    {
+      path: '/my/order-detail',
+      name: 'orderDetail',
+      component: () => import('../views/mysell/orderDetail.vue')
+    },
+    {
+      path: '/my/mysell-order',
+      name: 'mySellOrder',
+      component: () => import('../views/mysell/mySellOrder.vue')
+    },
+    {
+      path: '/my/myrental',
+      name: 'myrental',
+      component: () => import('../views/myrental/index.vue')
+    },
+    {
+      path: '/my/myrental-search',
+      name: 'myrentalSearch',
+      component: () => import('../views/myrental/search.vue')
+    },
+    {
+      path: '/my/myrental-searchresult',
+      name: 'searchResult',
+      component: () => import('../views/myrental/searchResult.vue')
+    },
+    {
+      path: '/my/finance',
+      name: 'finance',
+      component: () => import('../views/finance/index.vue')
     }
   ]
 })

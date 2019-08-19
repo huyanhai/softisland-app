@@ -2,46 +2,25 @@
  * @Description:search
  * @Author: hyh
  * @since: 2019-08-13 20:51:32
- * @lastTime: 2019-08-13 23:22:59
+ * @lastTime: 2019-08-17 12:24:21
  -->
 <template>
   <div class="pages page-edit-sell">
     <headBar :barTitle="barTitle"></headBar>
-    <steps :stepList="stepList" />
-    <div class="game-info">
-      <div class="info-hd">游戏区服基本信息</div>
-      <ul class="info-bd">
-        <li class="info-item">
-          <span class="label">游戏名称</span>
-          <input class="ui-input" type="text" name="" placeholder="请选择游戏">
-          <i class="iconfont icon-fanhui"></i>
-        </li>
-        <li class="info-item">
-          <span class="label">游戏大区</span>
-          <input class="ui-input" type="text" name="" placeholder="请选择游戏">
-          <i class="iconfont icon-fanhui"></i>
-        </li>
-        <li class="info-item">
-          <span class="label">服务器</span>
-          <input class="ui-input" type="text" name="" placeholder="请选择游戏">
-          <i class="iconfont icon-fanhui"></i>
-        </li>
-      </ul>
-      <a class="ui-btn">下一步</a>
-    </div>
-    <div class="tips">
-      温馨提示：<br>
-      1、跑跑卡丁车、NBA2KOL等此类游戏删除道具无需二级密码。<br>
-      2、考虑到风险问题，请在上架时建议设置押金。<br>
-      3、如果发生道具被删除，造成的损失由出租方自己承担责任。<br>
-      4、黎明杀机、侠盗猎车手、H1Z1等Steam平台的游戏请直接选择对应游戏。<br>
-      5、助手中不支持"启动游戏"功能。
-    </div>
+    <steps :stepList="stepList" :step="tostep" />
+    <step1 @stepOne="stepOne" :stepOneData="stepOneData" v-if="tostep===1" />
+    <step2 @stepTwo="stepTwo" @imgLoad="imgLoad" @clearImg="clearImg" :stepTwoData="stepTwoData" v-if="tostep===2" />
+    <step3 @stepThree="stepThree" :stepThreeData="stepThreeData" v-if="tostep===3" />
+    <step4 @stepFour="stepFour" :stepFourData="stepFourData" v-if="tostep===4" />
   </div>
 </template>
 <script>
 import headBar from '@/components/headBar'
 import steps from '@/components/step'
+import step1 from './components/step1'
+import step2 from './components/step2'
+import step3 from './components/step3'
+import step4 from './components/step4'
 export default {
   name: 'editSell',
   data () {
@@ -65,12 +44,64 @@ export default {
           text: '增值保障',
           active: false
         }
-      ]
+      ],
+      stepOneData: {
+        gameName: this.$store.state.chooseGame.choose_game || '',
+        gameRegin: this.$store.state.chooseGame.choose_regin || '',
+        gameServer: this.$store.state.chooseGame.choose_server || ''
+      },
+      stepTwoData: {
+        ifFrom: '',
+        gameAcc: '',
+        gamePwd: '',
+        gameRorl: '',
+        accTitle: '',
+        accShow: '',
+        picList: [undefined, undefined, undefined, undefined, undefined],
+        movieList: [undefined, undefined, undefined]
+      },
+      stepThreeData: {
+        zjPrices: '123',
+        yjtotalPrices: '',
+        rzDiscount: '',
+        bzDiscount: '',
+        byDiscount: '',
+        tenDiscount: '',
+        zzDiscount: '',
+        zdLease: 0,
+        zcLease: 0,
+        zdLeaseyh: 0,
+        zcLeaseyh: 0,
+        startTime: '00:00',
+        endTime: '00:00',
+        models: '1'
+      },
+      stepFourData: {
+        compensation: false,
+        guarantee: false,
+        xsshelves: false,
+        serverType: 1,
+        shelvesTimes: 1,
+        demand: false,
+        leaseTimes: 10,
+        escapeTimes: 3,
+        rank: false,
+        gold: false,
+        orderLease: false,
+        autoPwd: false
+      },
+      // 页面所有的数据
+      pagesData: {},
+      tostep: 1
     }
   },
   components: {
     headBar,
-    steps
+    steps,
+    step1,
+    step2,
+    step3,
+    step4
   },
   created () {
     this.$emit('footer', false)
@@ -78,6 +109,40 @@ export default {
   methods: {
     searchAgain () {
       this.$router.go(-1)
+    },
+    stepOne (e) {
+      this.stepOneData = Object.assign(this.stepOneData, e)
+      this.pagesData = Object.assign(this.pagesData, this.stepOneData)
+      this.tostep = 2
+    },
+    stepTwo (e) {
+      this.stepTwoData = Object.assign(this.stepTwoData, e)
+      this.pagesData = Object.assign(this.pagesData, this.stepTwoData)
+      this.tostep = 3
+    },
+    stepThree (e) {
+      this.stepThreeData = Object.assign(this.stepThreeData, e)
+      this.pagesData = Object.assign(this.pagesData, this.stepThreeData)
+      console.log(this.stepThreeData)
+      this.tostep = 4
+    },
+    stepFour (e) {
+      this.stepFourData = Object.assign(this.stepFourData, e)
+      this.pagesData = Object.assign(this.pagesData, this.stepFourData)
+      console.log(this.pagesData)
+    },
+    imgLoad (e) {
+      let index = e.index
+      let content = e.content
+      let arrName = e.arrName
+      this.stepTwoData[arrName][index] = content
+      console.log(this.stepTwoData)
+    },
+    clearImg (e) {
+      let index = e.index
+      let arrName = e.arrName
+      this.stepTwoData[arrName][index] = undefined
+      this.stepTwoData = Object.assign({}, this.stepTwoData)
     }
   }
 }
@@ -85,67 +150,6 @@ export default {
 <style lang="scss">
 @import "../../assets/scss/index";
 .page-edit-sell {
-  .game-info {
-    background: $color-fff;
-    @include border-radius(40px);
-    margin: 30px 20px 50px 20px;
-    @include box-shdow-gary();
-    box-sizing: border-box;
-    padding: 0 30px;
-    overflow: hidden;
-    .info-hd {
-      font-size: 28px;
-      color: $text-dark;
-      height: 100px;
-      line-height: 100px;
-      border-bottom: 1px solid $line-gary;
-    }
-    .info-bd {
-      .info-item {
-        display: flex;
-        align-items: center;
-        height: 80px;
-        line-height: 80px;
-        border-bottom: 1px solid $line-gary;
-        .label {
-          font-size: 26px;
-          color: $text-lgary;
-          width: 130px;
-          flex: 0 0 auto;
-          text-align: right;
-          margin-right: 20px;
-        }
-        .ui-input {
-          flex: 1 0 auto;
-          font-size: 26px;
-          color: $text-dark;
-        }
-        .iconfont {
-          flex: 0 0 auto;
-          transform: rotate(180deg);
-          color: $text-lgary;
-        }
-      }
-    }
-    .ui-btn {
-      width: 560px;
-      height: 88px;
-      display: block;
-      margin: 50px auto;
-      text-align: center;
-      line-height: 88px;
-      color: $color-fff;
-      font-size: 36px;
-      background: $brand-red;
-      box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
-      @include border-radius(88px);
-    }
-  }
-  .tips {
-    margin: 0 20px;
-    font-size: 22px;
-    color: $text-lgary;
-    line-height: 40px;
-  }
+  padding-bottom: 0 !important;
 }
 </style>

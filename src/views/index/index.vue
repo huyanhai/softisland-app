@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-08 14:16:02
- * @lastTime: 2019-08-10 20:46:30
+ * @lastTime: 2019-08-17 20:20:10
  -->
 <template>
   <div class="pages page-index">
@@ -177,6 +177,9 @@ export default {
           text-align: center;
           color: $color-fff;
           flex: 0 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           .ui-icon {
             font-size: 36px;
           }

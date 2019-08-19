@@ -2,11 +2,11 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-09 21:29:49
- * @lastTime: 2019-08-13 21:13:55
+ * @lastTime: 2019-08-17 15:45:11
  -->
 <template>
   <div class="nav-bar">
-    <div class="bar-box">
+    <div class="bar-box white-bg">
       <div class="bar-left" @click="onClickLeft">
         <slot name="bar-left">
           <i class="iconfont icon-fanhui"></i>
@@ -52,6 +52,7 @@ export default {
     line-height: 92px;
     box-sizing: border-box;
     background: $color-fff;
+
     .bar-left {
       position: relative;
       z-index: 10;

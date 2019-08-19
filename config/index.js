@@ -1,4 +1,11 @@
-'use strict';
+/*
+ * @Description:
+ * @Author: hyh
+ * @since: 2019-08-06 22:01:24
+ * @lastTime: 2019-08-15 20:46:46
+ * @如果有bug，那肯定不是我的锅
+ */
+'use strict'
 // Template version: 1.3.1
 // see http://vuejs-templates.github.io/webpack for documentation.
 

@@ -1,70 +1,49 @@
 <!--
- * @Description:sellList
+ * @Description:sellOrderList
  * @Author: hyh
  * @since: 2019-08-13 21:16:25
- * @lastTime: 2019-08-17 21:30:23
+ * @lastTime: 2019-08-17 21:35:15
  -->
 <template>
-  <div class="sell-list-c">
+  <div class="sell-order-c" @click="goOrderDetail">
     <span class="col">
-      <p class="col-l text">货架号：{{mysellList.sellNo}}</p>
-      <p class="col-r text al-r">状态：{{mysellList.status}}</p>
+      <p class="col-l text">订单号：{{mysellList.orderNo}}</p>
+      <p class="col-r text al-r">日期：{{mysellList.time}}</p>
     </span>
     <span class="col-box">
-      <p class="col-list text"><em class="name">游戏：</em>{{mysellList.gameName}}</p>
-      <p class="col-list text"><em class="name">角色名：</em>{{mysellList.roleName}}</p>
-      <p class="col-list text"><em class="name">区服：</em>{{mysellList.serverName}}</p>
-      <p class="col-list text"><em class="name">累计出租收入：</em>{{mysellList.income}}元</p>
-      <p class="col-list text"><em class="name">累计出租次数：</em>{{mysellList.lease}}次</p>
+      <p class="col-list text"><em class="name">订购时长：</em>{{mysellList.matchTime}}小时</p>
+      <p class="col-list text" :class="mysellList.orderStatus"><em class="name">订单状态：</em>{{stutas[mysellList.orderStatus]}}</p>
+      <p class="col-list text"><em class="name">订单租金：</em>{{mysellList.orderMoney}}元</p>
+      <p class="col-list text"><em class="name">订单押金：</em>{{mysellList.orderDeposit}}元</p>
     </span>
-    <a class="buy red-btn" @click="buy" v-html="buyText"></a>
-    <a class="edit red-btn" @click="edit">编辑货架</a>
   </div>
 </template>
 <script>
 export default {
-  name: 'sellList',
+  name: 'sellOrderList',
   props: {
     mysellList: Object
   },
   data () {
     return {
-      buyText: '购买置顶',
-      countDownNumber: 150,
-      btnDisable: false
+      stutas: {
+        doing: '进行中',
+        isCancel: '已撤单',
+        complainting: '投诉中',
+        complete: '已完成'
+      }
     }
   },
   methods: {
-    buy (item, index) {
-      console.log(item, index)
-      if (!this.btnDisable) {
-        this.countDown()
-      }
-      this.$router.push({ path: './buy-top' })
-    },
-    countDown () {
-      this.countDownNumber--
-      this.btnDisable = true
-      const timer = setInterval(() => {
-        if (this.countDownNumber > 0) {
-          this.btnDisable = true
-          this.buyText = `<p class="zd">置顶时长<em class="sm-txt">剩${this.countDownNumber}分钟</em></p>`
-          this.countDownNumber--
-        } else {
-          this.countDownNumber = 150
-          clearInterval(timer)
-        }
-      }, 1000)
-    },
-    edit () {
-      this.$router.push({ path: '/my/editsell' })
+    goOrderDetail () {
+      this.$router.push({ path: '/my/order-detail' })
     }
   }
 }
 </script>
 <style lang="scss">
 @import "../assets/scss/index";
-.sell-list-c {
+.sell-order-c {
   box-sizing: border-box;
   @include border-radius(40px);
   padding: 0 20px;
@@ -95,7 +74,7 @@ export default {
     overflow: hidden;
     display: block;
     .col-list {
-      width: 100%;
+      width: 50%;
       float: left;
       font-size: 24px;
       color: $text-dark;
@@ -110,6 +89,15 @@ export default {
       .name {
         color: $text-lgary;
         font-style: normal;
+      }
+      &.isCancel {
+        color: $text-gary;
+      }
+      &.complainting {
+        color: $brand-orange;
+      }
+      &.complete {
+        color: $brand-green;
       }
     }
   }

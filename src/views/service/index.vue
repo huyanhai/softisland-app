@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-08 23:15:10
- * @lastTime: 2019-08-10 20:46:00
+ * @lastTime: 2019-08-17 21:25:56
  -->
 <template>
   <div class="pages page-service">
@@ -10,7 +10,7 @@
     <user-info />
     <div class="m-service">
       <ul class="ui-repeart">
-        <li class="repeart-item" v-for="(item,index) in serverList" :key="index">
+        <li class="repeart-item" v-for="(item,index) in serverList" :key="index" @click="toPages(item)">
           <i class="ui-icon iconfont" :class="'icon-'+item.icon"></i>
           <p class="ui-text">{{item.text}}</p>
         </li>
@@ -25,10 +25,10 @@ export default {
   data () {
     return {
       serverList: [
-        { text: '我的出租账号', icon: 'icon_account', path: '/' },
-        { text: '我的出租订单', icon: 'chuzu', path: '/' },
-        { text: '我的合租', icon: 'hezu', path: '/' },
-        { text: '我的财务', icon: 'caiwu', path: '/' },
+        { text: '我的出租账号', icon: 'icon_account', path: '/my/mysell' },
+        { text: '我的出租订单', icon: 'chuzu', path: '/my/mysell-order' },
+        { text: '我的合租', icon: 'hezu', path: '/my/myrental' },
+        { text: '我的财务', icon: 'caiwu', path: '/my/finance' },
         { text: '账号事务', icon: 'shiwu', path: '/' },
         { text: '增值服务', icon: 'zengzhi', path: '/' },
         { text: '黑名单', icon: 'heimingdan', path: '/' }
@@ -40,6 +40,11 @@ export default {
   },
   created () {
     this.$emit('footer', true)
+  },
+  methods: {
+    toPages (e) {
+      this.$router.push({ path: e.path })
+    }
   }
 }
 </script>

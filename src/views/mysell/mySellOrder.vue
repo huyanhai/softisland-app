@@ -1,11 +1,11 @@
 <!--
- * @Description:我的出租账号
+ * @Description:我的出租订单
  * @Author: hyh
  * @since: 2019-08-12 22:22:39
- * @lastTime: 2019-08-17 11:26:26
+ * @lastTime: 2019-08-17 21:04:47
  -->
 <template>
-  <div class="pages page-sell">
+  <div class="pages page-sell-order">
     <head-bar :barTitle="barTitle">
       <span slot="right">
         <i class="iconfont icon-xingtaiduICON_sousuo---copy color-red" @click="toSearch"></i>
@@ -16,29 +16,28 @@
       <ul class="ui-repeart">
         <li class="repeart-item">
           <span class="ui-number">320</span>
-          <p class="text">账号数量</p>
+          <p class="text">恶意投诉</p>
         </li>
         <li class="repeart-item">
           <span class="ui-number">100</span>
-          <p class="text">正在出租中</p>
+          <p class="text">撤单次数</p>
         </li>
         <li class="repeart-item">
           <span class="ui-number">￥20</span>
-          <p class="text">本月收入</p>
-        </li>
-        <li class="repeart-item">
-          <span class="ui-number">￥320</span>
-          <p class="text">累计收入</p>
+          <p class="text">撤单率</p>
         </li>
       </ul>
     </div>
     <div class="my-all-sell">
       <div class="sell-hd">
-        我的所有货架
+        出租订单列表
+        <div class="tabs">
+          <a class="links" :class="{active:item.value === checked}" v-for="(item,index) in tabs" :key="index" @click="switchTab(item)">{{item.text}}</a>
+        </div>
       </div>
       <div class="sell-bd">
         <div class="sell-list" v-if="mysellList">
-          <sellList :mysellList="item" v-for="(item,index) in mysellList" :key="index" />
+          <sellOrderList :mysellList="item" v-for="(item,index) in mysellList" :key="index" />
         </div>
         <div class="no-sell" v-else>
           <i class="iconfont icon-wuzhanghao"></i>
@@ -47,47 +46,62 @@
         </div>
       </div>
     </div>
+    <loadMore :showLoad="showLoad" v-if="mysellList.length>0" />
   </div>
 </template>
 
 <script>
 import headBar from '@/components/headBar'
-import sellList from '@/components/sellList'
+import sellOrderList from '@/components/sellOrderList'
+import loadMore from '@/components/loadMore'
 export default {
   name: 'mySeller',
   data () {
     return {
-      barTitle: '我的出租账号',
+      barTitle: '我的出租订单',
+      // 加载更多
+      showLoad: true,
       mysellList: [{
-        sellNo: '12312312',
-        status: '进行中',
-        gameName: '魔兽世界',
-        roleName: '黄河水',
-        serverName: '重庆-江北区',
-        income: '18.23',
-        lease: '32'
+        orderNo: '12312312',
+        time: '2019-07-22 13:24',
+        matchTime: '1',
+        orderStatus: 'doing',
+        orderMoney: '12.32',
+        orderDeposit: '0'
       }, {
-        sellNo: '12312312',
-        status: '进行中',
-        gameName: '魔兽世界',
-        roleName: '黄河水',
-        serverName: '重庆-江北区',
-        income: '18.23',
-        lease: '32'
+        orderNo: '12312312',
+        time: '2019-07-22 13:24',
+        matchTime: '1',
+        orderStatus: 'isCancel',
+        orderMoney: '12.32',
+        orderDeposit: '0'
       }, {
-        sellNo: '12312312',
-        status: '进行中',
-        gameName: '魔兽世界',
-        roleName: '黄河水',
-        serverName: '重庆-江北区',
-        income: '18.23',
-        lease: '32'
-      }]
+        orderNo: '12312312',
+        time: '2019-07-22 13:24',
+        matchTime: '1',
+        orderStatus: 'complainting',
+        orderMoney: '12.32',
+        orderDeposit: '0'
+      }, {
+        orderNo: '12312312',
+        time: '2019-07-22 13:24',
+        matchTime: '1',
+        orderStatus: 'complete',
+        orderMoney: '12.32',
+        orderDeposit: '0'
+      }],
+      tabs: [
+        { text: '全部', value: 1 },
+        { text: '今日', value: 2 },
+        { text: '本月', value: 3 }
+      ],
+      checked: 1
     }
   },
   components: {
     headBar,
-    sellList
+    sellOrderList,
+    loadMore
   },
   created () {
     this.$emit('footer', false)
@@ -102,6 +116,9 @@ export default {
       this.$router.push({
         path: './exact-search'
       })
+    },
+    switchTab (e) {
+      this.checked = e.value
     }
 
   }
@@ -110,7 +127,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../assets/scss/index";
-.page-sell {
+.page-sell-order {
   padding-bottom: 0;
   .acc-data-info {
     box-sizing: border-box;
@@ -122,30 +139,28 @@ export default {
     .ui-repeart {
       overflow: hidden;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       &::before {
         content: "";
         display: block;
         position: absolute;
-        width: 100%;
-        border-bottom: 1px solid $line-gary;
-        top: 50%;
-        transform: translateY(-50%);
+        height: 80%;
+        border-left: 1px solid $line-gary;
+        left: 33.33%;
       }
       &::after {
         content: "";
         display: block;
         position: absolute;
-        height: calc(100% - 30px);
+        height: 80%;
         border-right: 1px solid $line-gary;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 15px;
+        right: 33.33%;
       }
       .repeart-item {
-        float: left;
-        width: 50%;
         text-align: center;
-        margin: 30px 0 30px 0;
+        margin: 30px 0;
         .ui-number {
           font-size: 30px;
           color: $text-dark;
@@ -167,6 +182,35 @@ export default {
     .sell-hd {
       font-size: 24px;
       color: $text-dark;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .tabs {
+        flex: 1 0 auto;
+        text-align: right;
+        .links {
+          margin-left: 20px;
+          position: relative;
+          color: $text-gary;
+          &.active {
+            color: $text-dark;
+            &::before {
+              display: block;
+            }
+          }
+          &::before {
+            width: 20px;
+            height: 2px;
+            content: "";
+            background: $brand-red;
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            margin-left: -10px;
+            display: none;
+          }
+        }
+      }
     }
     .sell-bd {
       .no-sell {

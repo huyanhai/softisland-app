@@ -2,7 +2,7 @@
  * @Description: 全局公共样式
  * @Author: hyh
  * @since: 2019-08-08 15:09:50
- * @lastTime: 2019-08-10 20:50:03
+ * @lastTime: 2019-08-17 10:48:16
  */
 
 body {
@@ -24,4 +24,19 @@ body,
 .van-dialog__confirm,
 .van-dialog__confirm:active {
   color: $brand-red;
+}
+
+.red-btn {
+  background: $brand-red;
+  box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+}
+
+.white-bg {
+  background: $color-fff;
+  @include box-shdow-gary();
+}
+
+.color-red {
+  font-style: normal;
+  color: $brand-yellow;
 }

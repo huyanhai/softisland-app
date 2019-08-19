@@ -2,21 +2,27 @@
  * @Description:操作步骤
  * @Author: hyh
  * @since: 2019-08-13 22:37:58
- * @lastTime: 2019-08-13 23:06:47
+ * @lastTime: 2019-08-15 23:53:07
  -->
 <template>
-  <ul class="step">
-    <li class="step-item" :class="{active:item.active}" v-for="(item,index) in stepList" :key="index">
-      <i class="label cborder">{{item.step}}</i>
-      <p class="text">{{item.text}}</p>
-    </li>
-  </ul>
+  <div class="step-box">
+    <ul class="step">
+      <li class="step-item" :class="{active:index===step-1,complate:index<step-1}" v-for="(item,index) in stepList" :key="index">
+        <i class="label" :class="{cborder:index>step-1}">{{item.step}}</i>
+        <p class="text">{{item.text}}</p>
+      </li>
+    </ul>
+  </div>
 </template>
 <script>
 export default {
   name: 'step',
   props: {
-    stepList: Array
+    stepList: Array,
+    step: {
+      type: Number,
+      default: 0
+    }
   }
 }
 </script>
@@ -52,6 +58,16 @@ export default {
       }
       .text {
         color: $brand-red;
+      }
+    }
+    &.complate {
+      .label {
+        background: $brand-green;
+        box-shadow: none;
+        color: $color-fff;
+      }
+      .text {
+        color: $text-dark;
       }
     }
     .label {
