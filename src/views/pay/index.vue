@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-09 21:32:07
- * @lastTime: 2019-08-10 16:45:52
+ * @lastTime: 2019-08-24 22:26:22
  -->
 <template>
   <div class="pages page-pay">
@@ -13,10 +13,12 @@
         <div class="choose-bd">
           <van-radio-group v-model="payMode">
             <van-radio name="1" class="col ali-pay">
-              <img class="check" slot="icon" slot-scope="props" :src="props.checked ? icon.active : icon.inactive">
+              <!-- <img class="check" slot="icon" slot-scope="props" :src="props.checked ? icon.active : icon.inactive"> -->
+              <i class="check" :class="[props.checked ? 'active' : '']" slot="icon" slot-scope="props"></i>
             </van-radio>
             <van-radio name="2" class="col wechart_pay">
-              <img class="check" slot="icon" slot-scope="props" :src="props.checked ? icon.active : icon.inactive">
+              <!-- <img class="check" slot="icon" slot-scope="props" :src="props.checked ? icon.active : icon.inactive"> -->
+              <i class="check" :class="[props.checked ? 'active' : '']" slot="icon" slot-scope="props"></i>
             </van-radio>
           </van-radio-group>
         </div>
@@ -120,10 +122,19 @@ export default {
         }
         .check {
           position: absolute;
-          right: 15px;
-          bottom: 15px;
-          width: 22px;
-          height: 22px;
+          // right: 15px;
+          // bottom: 15px;
+          // width: 22px;
+          // height: 22px;
+          &.active {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border: 1px solid red;
+            top: 0;
+            left: 0;
+            border-radius: 40px;
+          }
         }
       }
     }
