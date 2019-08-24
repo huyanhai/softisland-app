@@ -41,7 +41,7 @@
           <sellList :mysellList="item" v-for="(item,index) in mysellList" :key="index" />
         </div>
         <div class="no-sell" v-else>
-          <i class="iconfont icon-wuzhanghao"></i>
+          <i class="iconfont icon-emptydata"></i>
           <p class="text">您还没有发布任何账号呢<br>快去官网（www.17369.com）发布账号坐等收钱吧
           </p>
         </div>

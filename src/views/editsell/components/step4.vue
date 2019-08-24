@@ -2,7 +2,7 @@
  * @Description:step3
  * @Author: hyh
  * @since: 2019-08-14 21:52:28
- * @lastTime: 2019-08-17 10:53:53
+ * @lastTime: 2019-08-24 17:47:26
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -199,7 +199,7 @@ export default {
   .game-info {
     background: $color-fff;
     @include border-radius(40px);
-    margin: 30px 20px 20px 20px;
+    margin: 30px;
     @include box-shdow-gary();
     box-sizing: border-box;
     padding: 0 30px;

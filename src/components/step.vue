@@ -2,13 +2,13 @@
  * @Description:操作步骤
  * @Author: hyh
  * @since: 2019-08-13 22:37:58
- * @lastTime: 2019-08-15 23:53:07
+ * @lastTime: 2019-08-21 23:28:58
  -->
 <template>
   <div class="step-box">
     <ul class="step">
       <li class="step-item" :class="{active:index===step-1,complate:index<step-1}" v-for="(item,index) in stepList" :key="index">
-        <i class="label" :class="{cborder:index>step-1}">{{item.step}}</i>
+        <i class="label" :class="[{cborder:index>step-1},'item_'+stepList.length]">{{item.step}}</i>
         <p class="text">{{item.text}}</p>
       </li>
     </ul>
@@ -29,7 +29,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/index";
 .step {
-  margin: 30px 20px 20px 20px;
+  margin: 30px;
   background: $color-fff;
   @include border-radius(40px);
   display: flex;
@@ -83,6 +83,11 @@ export default {
       margin-bottom: 20px;
       position: relative;
       box-sizing: border-box;
+      &.item_3 {
+        &::after {
+          left: 200%;
+        }
+      }
       &::after {
         content: "";
         background: url("../assets/images/step.png") no-repeat;

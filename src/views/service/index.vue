@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-08 23:15:10
- * @lastTime: 2019-08-17 21:25:56
+ * @lastTime: 2019-08-23 23:34:43
  -->
 <template>
   <div class="pages page-service">
@@ -28,10 +28,10 @@ export default {
         { text: '我的出租账号', icon: 'icon_account', path: '/my/mysell' },
         { text: '我的出租订单', icon: 'chuzu', path: '/my/mysell-order' },
         { text: '我的合租', icon: 'hezu', path: '/my/myrental' },
-        { text: '我的财务', icon: 'caiwu', path: '/my/finance' },
-        { text: '账号事务', icon: 'shiwu', path: '/' },
-        { text: '增值服务', icon: 'zengzhi', path: '/' },
-        { text: '黑名单', icon: 'heimingdan', path: '/' }
+        { text: '我的财务', icon: 'caiwu', path: '/finance' },
+        { text: '账号事务', icon: 'shiwu', path: '/account' },
+        { text: '增值服务', icon: 'zengzhi', path: '/server/add-server' },
+        { text: '黑名单', icon: 'heimingdan', path: '/blacklist' }
       ]
     }
   },

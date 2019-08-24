@@ -2,7 +2,7 @@
  * @Description:card
  * @Author: hyh
  * @since: 2019-08-17 10:13:28
- * @lastTime: 2019-08-17 15:23:59
+ * @lastTime: 2019-08-21 00:03:51
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -86,9 +86,13 @@ export default {
         align-items: baseline;
         height: 140px;
         align-items: center;
+        margin: 20px 0 0 0;
         .ui-textarea {
           height: 80%;
         }
+      }
+      &.hei-in {
+        height: initial;
       }
       .switch-text {
         font-size: 26px;
@@ -179,6 +183,12 @@ export default {
           display: inline;
           margin-right: 5px;
         }
+      }
+      &.no-border {
+        border-bottom: 0;
+      }
+      &.col-5 {
+        width: 50%;
       }
     }
   }

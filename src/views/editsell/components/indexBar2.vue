@@ -2,7 +2,7 @@
  * @Description:indexBar
  * @Author: hyh
  * @since: 2019-08-14 22:39:03
- * @lastTime: 2019-08-15 23:36:54
+ * @lastTime: 2019-08-22 15:20:13
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -65,7 +65,7 @@ export default {
 <style lang="scss">
 @import "../../../assets/scss/index";
 .index-bar {
-  margin: 0 20px 20px 30px;
+  margin: 0 30px 20px 30px;
   background: $color-fff;
   @include border-radius(40px);
   @include box-shdow-gary();

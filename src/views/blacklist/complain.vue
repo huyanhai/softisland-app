@@ -2,7 +2,7 @@
  * @Description:订单投诉
  * @Author: hyh
  * @since: 2019-08-14 21:52:28
- * @lastTime: 2019-08-17 12:32:55
+ * @lastTime: 2019-08-24 22:12:50
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -15,7 +15,7 @@
     <div class="card-box">
       <card>
         <template slot="label-name">
-          加入黑名单
+          投诉类型
         </template>
         <template slot="card-bd">
           <div class="exsearch-bd">
@@ -32,7 +32,7 @@
         <template slot="card-bd">
           <ul class="info-bd">
             <li class="info-item textarea-item">
-              <textarea class="ui-input ui-textarea" v-model="reason" placeholder="请填写拉黑理由（30字以内)" maxlength="30"></textarea>
+              <textarea class="ui-input ui-textarea" v-model="reason" placeholder="请填写投诉理由（30字以内)" maxlength="30"></textarea>
             </li>
           </ul>
         </template>

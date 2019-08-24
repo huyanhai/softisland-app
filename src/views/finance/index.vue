@@ -2,34 +2,21 @@
  * @Description:我的财务
  * @Author: hyh
  * @since: 2019-08-12 22:22:39
- * @lastTime: 2019-08-17 21:25:11
+ * @lastTime: 2019-08-23 22:14:36
  -->
 <template>
   <div class="pages page-finance">
     <head-bar :barTitle="barTitle"></head-bar>
-    <div class="acc-data-info">
-      <ul class="ui-repeart">
-        <li class="repeart-item">
-          <span class="ui-number">320</span>
-          <p class="text">总资产(元)</p>
-        </li>
-        <li class="repeart-item">
-          <span class="ui-number">100</span>
-          <p class="text">可用余额(元)</p>
-        </li>
-        <li class="repeart-item">
-          <span class="ui-number">￥20</span>
-          <p class="text">冻结余额(元)</p>
-        </li>
-      </ul>
-    </div>
-    <footTabbar :activeColor="activeColor" :inactiveColor="inactiveColor" :menuInfo="menuInfo" />
+    <router-view />
+    <footTabbar @footSwitch="footSwitch" :activeColor="activeColor" :inactiveColor="inactiveColor" :menuInfo="menuInfo" :active="active" />
   </div>
 </template>
 
 <script>
 import headBar from '@/components/headBar'
 import footTabbar from '@/components/footTabbar'
+import tabMenu from '@/components/tabMenu'
+import financeList from '@/components/financeList'
 export default {
   name: 'finance',
   data () {
@@ -39,24 +26,70 @@ export default {
       inactiveColor: '#3f3f3f',
       // 加载更多
       showLoad: true,
+      financeList: [
+        {
+          desc: '开启错误赔付（增加冻结资金）-发布账号',
+          payType: '开通商户',
+          time: '2019-07-19 10:42:02',
+          totalMoney: '3562.00',
+          price: '3.00'
+        },
+        {
+          desc: '开启错误赔付（增加冻结资金）-发布账号',
+          payType: '开通商户',
+          time: '2019-07-19 10:42:02',
+          totalMoney: '3562.00',
+          price: '-3.00'
+        },
+        {
+          desc: '开启错误赔付（增加冻结资金）-发布账号',
+          payType: '开通商户',
+          time: '2019-07-19 10:42:02',
+          totalMoney: '3562.00',
+          price: '-3.00'
+        },
+        {
+          desc: '开启错误赔付（增加冻结资金）-发布账号',
+          payType: '开通商户',
+          time: '2019-07-19 10:42:02',
+          totalMoney: '3562.00',
+          price: '-3.00'
+        },
+        {
+          desc: '开启错误赔付（增加冻结资金）-发布账号',
+          payType: '开通商户',
+          time: '2019-07-19 10:42:02',
+          totalMoney: '3562.00',
+          price: '-3.00'
+        }
+      ],
+      active: 0,
       menuInfo: [
-        { text: '账单', path: '/', icon: 'fcstubiao06', dot: false },
-        { text: '服务', path: '/service', icon: 'tongji', dot: false }
+        { text: '账单', path: '/finance/order', icon: 'fcstubiao06', dot: false },
+        { text: '服务', path: '/finance/server', icon: 'tongji', dot: false }
       ],
       tabs: [
         { text: '全部', value: 1 },
-        { text: '今日', value: 2 },
-        { text: '本月', value: 3 }
+        { text: '收入', value: 2 },
+        { text: '支出', value: 3 },
+        { text: '充值', value: 4 },
+        { text: '提现', value: 5 }
       ],
-      checked: 1
+      checked: 1,
+      isTop: false
     }
   },
   components: {
     headBar,
-    footTabbar
+    footTabbar,
+    tabMenu,
+    financeList
   },
   created () {
     this.$emit('footer', false)
+  },
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll)
   },
   methods: {
     toSearch () {
@@ -70,9 +103,23 @@ export default {
       })
     },
     switchTab (e) {
-      this.checked = e.value
+      console.log(e)
+    },
+    handleScroll () {
+      var scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop
+      if (scrollTop > 110) {
+        this.isTop = true
+      } else {
+        this.isTop = false
+      }
+    },
+    // 底部切换
+    footSwitch (e) {
+      console.log(e)
     }
-
   }
 }
 </script>
@@ -80,13 +127,12 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/scss/index";
 .page-finance {
-  padding-bottom: 0;
   .acc-data-info {
     box-sizing: border-box;
     @include border-radius(40px);
     background: rgba($color-fff, 0.95);
     padding: 15px 30px;
-    margin: 30px 30px 20px 30px;
+    margin: 30px;
     @include box-shdow-gary();
     .ui-repeart {
       overflow: hidden;
@@ -128,6 +174,25 @@ export default {
         }
       }
     }
+  }
+  .tabs {
+    margin-bottom: 30px;
+    &.isFixed {
+      position: fixed;
+      z-index: 100;
+      top: 120px;
+      margin: 0 30px;
+    }
+  }
+  .finacce-list {
+    margin: 0 30px 20px 30px;
+  }
+  .layers {
+    position: fixed;
+    width: 100%;
+    height: 170px;
+    background: $line-gary;
+    top: 0;
   }
 }
 </style>

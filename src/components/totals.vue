@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-09 15:14:44
- * @lastTime: 2019-08-09 16:46:09
+ * @lastTime: 2019-08-24 19:45:54
  -->
 <template>
   <div class="com-total van-c-r" v-if="totalShow">

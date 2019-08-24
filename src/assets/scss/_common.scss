@@ -2,17 +2,25 @@
  * @Description: 全局公共样式
  * @Author: hyh
  * @since: 2019-08-08 15:09:50
- * @lastTime: 2019-08-17 10:48:16
+ * @lastTime: 2019-08-23 22:48:48
  */
 
 body {
   background: $line-gary;
   overflow-x: hidden;
+  font-family: 'SF Pro SC', 'SF Pro Text', 'SF Pro Icons', 'PingFang SC',
+    'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 html,
 body,
 #app {
   height: 100%;
+}
+input {
+  border: none;
+  &::-webkit-input-placeholder {
+    color: $text-gary;
+  }
 }
 .pages {
   padding-bottom: 120px;

@@ -2,7 +2,7 @@
  * @Description:dialog弹窗
  * @Author: hyh
  * @since: 2019-08-17 10:58:09
- * @lastTime: 2019-08-17 11:20:29
+ * @lastTime: 2019-08-21 22:46:11
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -76,6 +76,9 @@ export default {
       font-size: 28px;
       color: $brand-orange;
       border-top: 1px solid $line-gary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

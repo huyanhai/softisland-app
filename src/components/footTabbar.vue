@@ -2,11 +2,11 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-08 22:26:05
- * @lastTime: 2019-08-11 11:10:11
+ * @lastTime: 2019-08-24 13:18:00
  -->
 <template>
   <van-tabbar v-model="active" class="footer-tab-bar" :active-color="activeColor" :inactive-color="inactiveColor" safe-area-inset-bottom>
-    <van-tabbar-item :dot="item.dot" :to="item.path" v-for="(item,index) in menuInfo" :key="index">
+    <van-tabbar-item :dot="item.dot" :to="item.path" v-for="(item,index) in menuInfo" :key="index" @click="footSwitch">
       <i class="iconfont ui-icon" :class="'icon-'+item.icon" slot="icon"></i>
       <span class="ui-text">{{item.text}}</span>
     </van-tabbar-item>
@@ -25,6 +25,11 @@ export default {
   data () {
     return {
       active: 0
+    }
+  },
+  methods: {
+    footSwitch () {
+      this.$emit('footSwitch', { active: this.active })
     }
   },
   watch: {

@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-06 22:01:24
- * @lastTime: 2019-08-15 20:46:46
+ * @lastTime: 2019-08-21 20:20:57
  * @如果有bug，那肯定不是我的锅
  */
 'use strict'
@@ -58,7 +58,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
 
     /**
      * Source Maps

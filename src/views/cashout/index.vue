@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-09 21:32:07
- * @lastTime: 2019-08-10 20:44:48
+ * @lastTime: 2019-08-22 14:04:23
  -->
 <template>
   <div class="pages page-pay">
@@ -137,6 +137,7 @@ export default {
           width: 50%;
           font-size: 24px;
           color: $text-dark;
+          border: none;
           &::-webkit-input-placeholder {
             color: $text-gary;
           }

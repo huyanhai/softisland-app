@@ -2,7 +2,7 @@
  * @Description:我的合租
  * @Author: hyh
  * @since: 2019-08-12 22:22:39
- * @lastTime: 2019-08-17 21:36:50
+ * @lastTime: 2019-08-19 20:50:17
  -->
 <template>
   <div class="pages page-rental">
@@ -11,16 +11,14 @@
         <i class="iconfont icon-shaixuan color-red" @click="toExactSearch"></i>
       </span>
     </head-bar>
-    <div class="tabs white-bg">
-      <a class="link" :class="{active:checked===item.value}" v-for="(item,index) in tabs" :key="index" @click="switchTab(item)">{{item.text}}</a>
-    </div>
+    <tabMenu :tabs="tabs" />
     <div class="my-all-sell">
       <div class="sell-bd">
         <div class="sell-list" v-if="mysellList">
           <rentalList :mysellList="item" v-for="(item,index) in mysellList" :key="index" />
         </div>
         <div class="no-sell" v-else>
-          <i class="iconfont icon-wuzhanghao"></i>
+          <i class="iconfont icon-emptydata"></i>
           <p class="text" v-html="tispText"></p>
         </div>
       </div>
@@ -30,6 +28,7 @@
 <script>
 import headBar from '@/components/headBar'
 import rentalList from '@/components/rentalList'
+import tabMenu from '@/components/tabMenu'
 export default {
   name: 'myRental',
   data () {
@@ -59,13 +58,14 @@ export default {
         { text: '我自己的账号', value: 1 },
         { text: '我招募的账号', value: 2 }
       ],
-      tispText: '您还没有发布任何账号呢<br>快去官网（www.17369.com）发布账号坐等收钱吧',
-      checked: 1
+      tispText: '您还没有发布任何账号呢<br>快去官网（www.17369.com）发布账号坐等收钱吧'
+
     }
   },
   components: {
     headBar,
-    rentalList
+    rentalList,
+    tabMenu
   },
   created () {
     this.$emit('footer', false)
@@ -77,7 +77,6 @@ export default {
       })
     },
     switchTab (e) {
-      this.checked = e.value
       if (e.value === 2) {
         this.tispText = `您还没有招募任何账号呢<br>快去官网（www.17369.com）发布账号坐等收钱吧`
       } else {
@@ -93,26 +92,7 @@ export default {
 @import "../../assets/scss/index";
 .page-rental {
   padding-bottom: 0;
-  .tabs {
-    width: 690px;
-    height: 88px;
-    @include border-radius(88px);
-    overflow: hidden;
-    margin: 30px auto 0 auto;
-    display: flex;
-    .link {
-      width: 50%;
-      text-align: center;
-      font-size: 30px;
-      color: $text-dark;
-      line-height: 88px;
-      &.active {
-        background: $brand-red;
-        color: $color-fff;
-        @include border-radius(88px);
-      }
-    }
-  }
+
   .my-all-sell {
     margin: 30px;
     .sell-hd {

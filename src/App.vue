@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-08 14:10:24
- * @lastTime: 2019-08-09 16:51:58
+ * @lastTime: 2019-08-22 13:57:43
  -->
 <template>
   <div id="app">
@@ -42,12 +42,12 @@ export default {
 </script>
 <style lang="scss">
 @import "./assets/scss/index";
-.transitionRouter-enter-active,
-.transitionRouter-leave-active {
-  transition: all 0.4s;
-}
-.transitionRouter-enter,
-.transitionRouter-leave {
-  transform: translate3d(100%, 0, 0);
-}
+// .transitionRouter-enter-active,
+// .transitionRouter-leave-active {
+//   transition: all 0.4s;
+// }
+// .transitionRouter-enter,
+// .transitionRouter-leave {
+//   transform: translate3d(100%, 0, 0);
+// }
 </style>

@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-08 14:12:05
- * @lastTime: 2019-08-10 17:17:50
+ * @lastTime: 2019-08-24 20:08:20
  -->
 <template>
   <div class="pages page-login">
@@ -125,7 +125,7 @@ export default {
   height: 100%;
   background-size: contain;
   overflow: hidden;
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
   .logo {
     width: 362px;
     height: 109px;
