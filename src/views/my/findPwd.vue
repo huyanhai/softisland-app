@@ -2,7 +2,7 @@
  * @Description: 找回支付密码
  * @Author: hyh
  * @since: 2019-08-24 16:53:26
- * @lastTime: 2019-08-24 20:07:11
+ * @lastTime: 2019-08-26 16:28:40
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -142,7 +142,7 @@ export default {
       width: 50%;
       background: none;
       border: none;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
     }
     .iconfont {
@@ -151,8 +151,8 @@ export default {
     }
     .label {
       flex: 0 0 auto;
-      font-size: 24px;
-      color: $text-dark;
+      font-size: 26px;
+      color: $text-lgary;
     }
     .switch {
       flex: 1 0 auto;
@@ -169,13 +169,13 @@ export default {
     padding: 0 30px;
     .col {
       display: flex;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       align-items: center;
       justify-content: space-between;
       height: 80px;
       .col-l {
         font-size: 26px;
-        color: $text-dark;
+        color: $text-lgary;
         flex: 0 0 auto;
         width: 120px;
       }
@@ -206,7 +206,7 @@ export default {
         }
       }
       .r-text {
-        font-size: 24px;
+        font-size: 26px;
         color: $brand-orange;
       }
       .iconfont {

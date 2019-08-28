@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-08 23:15:53
- * @lastTime: 2019-08-10 20:42:53
+ * @lastTime: 2019-08-27 18:23:46
  -->
 <template>
   <div class="portrait">
@@ -109,7 +109,7 @@ export default {
     align-items: center;
     position: absolute;
     top: -85px;
-    box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+    box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
     left: 50%;
     margin-left: -75px;
     .ui-img {
@@ -127,20 +127,19 @@ export default {
       font-size: 30px;
       margin-bottom: 30px;
       padding-top: 60px;
-      font-family: $pf-med;
     }
     .m-col {
       display: flex;
       .ui-col {
         width: 50%;
-        font-size: 24px;
+        font-size: 26px;
         color: $text-lgary;
         .reputation,
         .grade {
           display: flex;
           align-items: center;
           justify-content: center;
-          font-family: $pf-light;
+
           height: 30px;
           overflow: hidden;
           .ui-img {
@@ -160,13 +159,13 @@ export default {
             position: relative;
             .leve {
               position: absolute;
-              font-size: 10px;
-              left: 25px;
+              font-size: 30px;
+              left: 19px;
               font-style: normal;
-              top: 21px;
+              top: 16px;
               color: $color-fff;
               font-weight: bold;
-              transform: scale(0.6);
+              transform: scale(0.5);
             }
           }
           .masonry {
@@ -201,21 +200,20 @@ export default {
       text-align: center;
       .money {
         color: $brand-red;
-        font-family: $pf-light;
+
         margin-bottom: 16px;
         .number {
-          font-family: $pf-med;
           font-size: 40px;
           margin-bottom: 10px;
           display: block;
           &::before {
             content: "￥";
-            font-size: 24px;
+            font-size: 26px;
           }
         }
         .text {
           margin: 0;
-          font-size: 24px;
+          font-size: 26px;
           color: $text-lgary;
         }
       }
@@ -223,7 +221,7 @@ export default {
         background: $brand-red;
         width: 180px;
         height: 60px;
-        box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+        box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
         @include border-radius(60px);
         text-align: center;
         line-height: 60px;

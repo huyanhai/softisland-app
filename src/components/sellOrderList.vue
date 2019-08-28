@@ -56,8 +56,8 @@ export default {
     display: flex;
     height: 70px;
     line-height: 70px;
-    border-bottom: 1px solid $line-gary;
-    font-size: 24px;
+    border-bottom: 1px dashed $line-gary;
+    font-size: 26px;
     color: $text-dark;
     justify-content: space-between;
     align-items: center;
@@ -76,7 +76,7 @@ export default {
     .col-list {
       width: 50%;
       float: left;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
       line-height: 60px;
       &:nth-child(1),
@@ -110,7 +110,7 @@ export default {
     bottom: 110px;
     text-align: center;
     line-height: 60px;
-    font-size: 24px;
+    font-size: 26px;
     color: $color-fff;
     background: $brand-red;
     @include border-radius(60px);

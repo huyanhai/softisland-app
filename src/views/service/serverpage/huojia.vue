@@ -2,7 +2,7 @@
  * @Description:出租货架
  * @Author: hyh
  * @since: 2019-08-20 21:35:38
- * @lastTime: 2019-08-23 10:36:58
+ * @lastTime: 2019-08-27 15:47:24
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -86,7 +86,7 @@ export default {
     align-items: center;
     .ui-cancel {
       font-size: 26px;
-      color: $brand-yellow;
+      color: $brand-orange;
       margin-left: 20px;
     }
   }
@@ -108,7 +108,7 @@ export default {
         display: block;
         position: absolute;
         height: 80%;
-        border-left: 1px solid $line-gary;
+        border-left: 1px dashed $line-gary;
         left: 33.33%;
       }
       &::after {
@@ -116,7 +116,7 @@ export default {
         display: block;
         position: absolute;
         height: 80%;
-        border-right: 1px solid $line-gary;
+        border-right: 1px dashed $line-gary;
         right: 33.33%;
       }
       .repeart-item {
@@ -126,14 +126,12 @@ export default {
         .ui-number {
           font-size: 30px;
           color: $text-dark;
-          font-family: $pf-bold;
           display: block;
           margin-bottom: 20px;
         }
         .text {
-          font-size: 24px;
+          font-size: 26px;
           color: $text-lgary;
-          font-family: $pf-light;
           margin: 0;
         }
       }
@@ -141,7 +139,7 @@ export default {
   }
   .ui-title {
     margin: 0 30px;
-    font-size: 24px;
+    font-size: 26px;
     color: $text-dark;
     margin-top: 40px;
   }

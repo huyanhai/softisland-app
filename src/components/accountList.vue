@@ -2,7 +2,7 @@
  * @Description:accountList
  * @Author: hyh
  * @since: 2019-08-19 20:53:45
- * @lastTime: 2019-08-20 23:11:05
+ * @lastTime: 2019-08-27 17:29:51
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -63,7 +63,7 @@ export default {
 .account-list-c {
   box-sizing: border-box;
   @include border-radius(40px);
-  padding: 0 20px;
+  padding: 0 30px;
   background: $color-fff;
   overflow: hidden;
   display: block;
@@ -73,11 +73,13 @@ export default {
     display: flex;
     height: 70px;
     line-height: 70px;
-    border-bottom: 1px solid $line-gary;
-    font-size: 24px;
+    border-bottom: 1px dashed $line-gary;
+    font-size: 26px;
     color: $text-dark;
     justify-content: space-between;
     align-items: center;
+    font-weight: bold;
+    font-size: 28px;
     .text {
       margin: 0;
       width: 50%;
@@ -90,6 +92,9 @@ export default {
   .col-r {
     flex: 1 0 auto;
     width: 70%;
+    font-weight: normal;
+    color: $text-lgary;
+    font-size: 26px;
   }
   .col-r {
     text-align: right;
@@ -103,10 +108,10 @@ export default {
       position: absolute;
       font-size: 160px;
       right: 40px;
-      bottom: 80px;
+      bottom: 100px;
       transform: rotate(-30deg);
       &.color-green {
-        color: $brand-green;
+        color: $text-dark;
       }
       &.color-red {
         color: $brand-orange;
@@ -114,7 +119,7 @@ export default {
     }
     .col-list {
       width: 100%;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
       line-height: 60px;
       height: 60px;
@@ -140,7 +145,7 @@ export default {
       }
     }
     .line {
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       margin: 20px 0;
       height: 1px;
     }
@@ -165,7 +170,7 @@ export default {
     margin-bottom: 30px;
   }
   .text {
-    font-size: 24px;
+    font-size: 26px;
     line-height: 40px;
     color: $text-lgary;
   }

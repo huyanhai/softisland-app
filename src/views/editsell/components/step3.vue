@@ -2,7 +2,7 @@
  * @Description:step3
  * @Author: hyh
  * @since: 2019-08-14 21:52:28
- * @lastTime: 2019-08-16 22:42:18
+ * @lastTime: 2019-08-27 17:37:21
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -73,12 +73,12 @@
           <span class="label">时段设置</span>
           <span class="line">
             <p class="times start" @click="showTimer1">
-              <i class="iconfont icon-dingwei"></i>
+              <i class="iconfont icon-shichang"></i>
               {{stepThreeData.startTime}}
             </p>
             <em class="jg">至</em>
             <p class="times end" @click="showTimer2">
-              <i class="iconfont icon-dingwei"></i>
+              <i class="iconfont icon-shichang"></i>
               {{stepThreeData.endTime}}
             </p>
           </span>
@@ -181,11 +181,13 @@ export default {
       color: $text-dark;
       height: 100px;
       line-height: 100px;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       margin-top: 20px;
+      font-weight: bold;
       .text {
-        font-size: 24px;
+        font-size: 26px;
         color: $text-lgary;
+        font-weight: normal;
       }
       &:first-child {
         margin-top: 0;
@@ -200,7 +202,7 @@ export default {
         align-items: center;
         height: 80px;
         line-height: 80px;
-        border-bottom: 1px solid $line-gary;
+        border-bottom: 1px dashed $line-gary;
         &.no-border {
           border-bottom: 0;
         }
@@ -240,6 +242,7 @@ export default {
             .iconfont {
               display: inline;
               vertical-align: top;
+              font-size: 30px;
             }
           }
           .jg {
@@ -255,7 +258,7 @@ export default {
           height: 60px;
           background: $line-gary;
           @include border-radius(60px);
-          font-size: 24px;
+          font-size: 26px;
           color: $text-lgary;
           text-align: center;
           line-height: 60px;
@@ -291,7 +294,7 @@ export default {
         .upload {
           width: 150px;
           height: 150px;
-          border: 1px dashed $line-gary;
+          border: 1px solid #e4e4e4;
           margin-bottom: 20px;
           margin-right: 30px;
           position: relative;
@@ -335,7 +338,7 @@ export default {
       color: $color-fff;
       font-size: 36px;
       background: $brand-red;
-      box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+      box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
       @include border-radius(88px);
     }
   }
@@ -348,7 +351,7 @@ export default {
     .tisp {
       text-align: center;
       font-size: 20px;
-      color: $brand-yellow;
+      color: $brand-orange;
       margin-top: 30px;
     }
     .van-radio-group {
@@ -360,7 +363,7 @@ export default {
       width: 190px;
       height: 60px;
       color: $text-dark;
-      font-size: 24px;
+      font-size: 26px;
       text-align: center;
       line-height: 60px;
       background: $line-gary;

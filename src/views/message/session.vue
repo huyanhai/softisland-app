@@ -2,7 +2,7 @@
  * @Description: 聊天界面
  * @Author: hyh
  * @since: 2019-08-24 10:38:36
- * @lastTime: 2019-08-24 12:01:50
+ * @lastTime: 2019-08-28 14:31:39
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -66,6 +66,7 @@ export default {
       this.$emit('changTitle', this.barTitle)
       this.$emit('footer', false)
     }, 100)
+    this.$emit('header', false)
   },
   destroyed () {
     this.$emit('changTitle', '消息通知')
@@ -99,6 +100,8 @@ export default {
       font-size: 22px;
       color: $text-gary;
       text-align: center;
+      margin: 0;
+      margin-bottom: 20px;
     }
     .other {
       display: block;
@@ -126,7 +129,7 @@ export default {
         background: $color-fff;
         padding: 20px 30px;
         margin-left: 30px;
-        font-size: 24px;
+        font-size: 26px;
         color: $text-dark;
         line-height: 40px;
         @include box-shdow-gary();
@@ -141,7 +144,6 @@ export default {
           transform: rotate(45deg);
           left: -10px;
           top: 40px;
-          @include box-shdow-gary();
         }
       }
     }
@@ -157,6 +159,8 @@ export default {
       color: $text-gary;
       text-align: center;
       overflow: hidden;
+      margin: 0;
+      margin-bottom: 20px;
     }
     .me {
       display: block;
@@ -185,7 +189,7 @@ export default {
         background: $brand-yellow;
         padding: 20px 30px;
         margin-right: 30px;
-        font-size: 24px;
+        font-size: 26px;
         color: $color-fff;
         line-height: 40px;
         @include box-shdow-gary();
@@ -200,7 +204,6 @@ export default {
           transform: rotate(45deg);
           right: -10px;
           top: 40px;
-          @include box-shdow-gary();
         }
       }
     }
@@ -242,7 +245,7 @@ export default {
         border: 0;
         margin: 0 80px 0 20px;
         background: none;
-        font-size: 24px;
+        font-size: 26px;
         display: block;
       }
       .emjoy {

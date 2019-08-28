@@ -2,7 +2,7 @@
  * @Description:购买短信
  * @Author: hyh
  * @since: 2019-08-20 21:35:38
- * @lastTime: 2019-08-23 18:16:50
+ * @lastTime: 2019-08-28 13:51:00
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -114,12 +114,15 @@ export default {
         text-align: right;
         width: 100%;
         font-size: 28px;
+        .color-red {
+          color: $brand-orange;
+        }
       }
       .shop-right {
         margin: 0;
         text-align: left;
         width: 100%;
-        font-size: 24px;
+        font-size: 26px;
       }
     }
   }
@@ -135,7 +138,7 @@ export default {
     background: $text-gary;
     &.active {
       background: $brand-red;
-      box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+      box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
     }
   }
 }

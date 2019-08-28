@@ -2,17 +2,17 @@
  * @Description:sellList
  * @Author: hyh
  * @since: 2019-08-13 21:16:25
- * @lastTime: 2019-08-17 21:30:23
+ * @lastTime: 2019-08-28 16:43:19
  -->
 <template>
   <div class="sell-list-c">
-    <span class="col">
+    <span class="col __bold">
       <p class="col-l text">货架号：{{mysellList.sellNo}}</p>
       <p class="col-r text al-r">状态：{{mysellList.status}}</p>
     </span>
     <span class="col-box">
       <p class="col-list text"><em class="name">游戏：</em>{{mysellList.gameName}}</p>
-      <p class="col-list text"><em class="name">角色名：</em>{{mysellList.roleName}}</p>
+      <p class="col-list text align-r"><em class="name">角色名：</em>{{mysellList.roleName}}</p>
       <p class="col-list text"><em class="name">区服：</em>{{mysellList.serverName}}</p>
       <p class="col-list text"><em class="name">累计出租收入：</em>{{mysellList.income}}元</p>
       <p class="col-list text"><em class="name">累计出租次数：</em>{{mysellList.lease}}次</p>
@@ -67,7 +67,7 @@ export default {
 .sell-list-c {
   box-sizing: border-box;
   @include border-radius(40px);
-  padding: 0 20px;
+  padding: 0 30px;
   background: $color-fff;
   overflow: hidden;
   display: block;
@@ -77,8 +77,8 @@ export default {
     display: flex;
     height: 70px;
     line-height: 70px;
-    border-bottom: 1px solid $line-gary;
-    font-size: 24px;
+    border-bottom: 1px dashed $line-gary;
+    font-size: 26px;
     color: $text-dark;
     justify-content: space-between;
     align-items: center;
@@ -97,12 +97,15 @@ export default {
     .col-list {
       width: 100%;
       float: left;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
       line-height: 60px;
       &:nth-child(1),
       &:nth-child(2) {
         width: 50%;
+      }
+      &.align-r {
+        text-align: right;
       }
       &.text {
         margin: 0;
@@ -122,7 +125,7 @@ export default {
     bottom: 110px;
     text-align: center;
     line-height: 60px;
-    font-size: 24px;
+    font-size: 26px;
     color: $color-fff;
     background: $brand-red;
     @include border-radius(60px);

@@ -2,7 +2,7 @@
  * @Description:购买置顶
  * @Author: hyh
  * @since: 2019-08-14 21:52:28
- * @lastTime: 2019-08-17 21:09:02
+ * @lastTime: 2019-08-28 14:49:28
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -72,7 +72,7 @@
         </template>
         <template slot="card-hd-right">
           <span class="text-right weight-font">
-            总费用：<em class="color-red">5</em>元
+            总费用：<em class="color-orange">5</em>元
           </span>
         </template>
         <template slot="card-bd">
@@ -165,8 +165,13 @@ export default {
         font-size: 28px;
       }
       .link {
-        color: $brand-yellow;
+        color: $brand-orange;
         text-decoration: underline;
+      }
+    }
+    .info-item {
+      .label {
+        width: 160px !important;
       }
     }
   }
@@ -180,7 +185,7 @@ export default {
     color: $color-fff;
     font-size: 36px;
     background: $brand-red;
-    box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+    box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
     @include border-radius(88px);
     &.step4 {
       width: 690px;

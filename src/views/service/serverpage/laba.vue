@@ -2,7 +2,7 @@
  * @Description:喇叭服务
  * @Author: hyh
  * @since: 2019-08-20 21:35:38
- * @lastTime: 2019-08-22 23:22:09
+ * @lastTime: 2019-08-27 18:15:30
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -26,6 +26,12 @@ export default {
       barTitle: '喇叭服务',
       dataSet: [
         {
+          goodsNo: '12321322',
+          time: '2019-07-22 13:24',
+          buyTimes: '541255',
+          hasTimes: '1455656',
+          labaText: 'safawefasdfasdfasdfasfasfefsafaeswfdsaf'
+        }, {
           goodsNo: '12321322',
           time: '2019-07-22 13:24',
           buyTimes: '541255',
@@ -64,7 +70,7 @@ export default {
     align-items: center;
     .ui-cancel {
       font-size: 26px;
-      color: $brand-yellow;
+      color: $brand-orange;
       margin-left: 20px;
     }
   }

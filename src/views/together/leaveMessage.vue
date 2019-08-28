@@ -2,7 +2,7 @@
  * @Description:合租留言
  * @Author: hyh
  * @since: 2019-08-14 21:52:28
- * @lastTime: 2019-08-17 16:24:36
+ * @lastTime: 2019-08-28 16:13:41
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -118,7 +118,7 @@ export default {
     align-items: center;
     .ui-cancel {
       font-size: 26px;
-      color: $brand-yellow;
+      color: $brand-orange;
       margin-left: 20px;
     }
   }
@@ -138,7 +138,7 @@ export default {
     .message {
       .message-item {
         padding: 0 0 30px 0;
-        border-bottom: 1px solid $line-gary;
+        border-bottom: 1px dashed $line-gary;
         .msg-hd {
           height: 80px;
           line-height: 80px;
@@ -161,7 +161,7 @@ export default {
           }
         }
         .msg-bd {
-          font-size: 22px;
+          font-size: 26px;
           color: $text-lgary;
           line-height: 40px;
           margin: 0;

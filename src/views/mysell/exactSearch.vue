@@ -108,7 +108,7 @@ export default {
         width: 190px;
         height: 60px;
         color: $text-dark;
-        font-size: 24px;
+        font-size: 26px;
         text-align: center;
         line-height: 60px;
         background: $line-gary;
@@ -144,7 +144,7 @@ export default {
       background: $brand-red;
       display: block;
       margin: 60px auto 50px auto;
-      box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+      box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
     }
   }
 }

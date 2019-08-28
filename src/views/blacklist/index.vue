@@ -2,7 +2,7 @@
  * @Description:我的财务
  * @Author: hyh
  * @since: 2019-08-12 22:22:39
- * @lastTime: 2019-08-23 23:04:09
+ * @lastTime: 2019-08-26 15:49:33
  -->
 <template>
   <div class="pages page-myblack-list">
@@ -23,7 +23,7 @@ export default {
       activeColor: '#ff293f',
       inactiveColor: '#3f3f3f',
       menuInfo: [
-        { text: '我的拉黑', path: '/blacklist/list', icon: 'fcstubiao06', dot: false },
+        { text: '我的拉黑', path: '/blacklist/list', icon: 'icon_lahei', dot: false },
         { text: '拉黑公示', path: '/blacklist/all-list', icon: 'gongshi', dot: false }
       ]
     }

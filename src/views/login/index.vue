@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-08 14:12:05
- * @lastTime: 2019-08-24 20:08:20
+ * @lastTime: 2019-08-26 14:56:59
  -->
 <template>
   <div class="pages page-login">
@@ -143,33 +143,34 @@ export default {
         flex-direction: column;
         margin-top: 80px;
         .col {
-          font-size: 24px;
+          font-size: 26px;
           color: $text-gary;
           position: relative;
           .link {
             position: absolute;
             right: 0;
             top: 34px;
-            font-size: 24px;
+            font-size: 26px;
             color: $brand-red;
           }
           .text {
             position: absolute;
             right: 0;
             top: 34px;
-            font-size: 24px;
+            font-size: 26px;
             margin: 0;
             color: $brand-red;
           }
           .iconfont {
             margin-right: 5px;
+            font-size: 26px;
           }
           .ui-input {
             width: 100%;
             color: $text-dark;
             font-size: 26px;
             border: 0;
-            border-bottom: 1px solid $line-gary;
+            border-bottom: 1px dashed $line-gary;
             outline: 0;
             height: 50px;
             line-height: 50px;
@@ -181,7 +182,7 @@ export default {
           line-height: 88px;
           @include border-radius(88px);
           background: $brand-red;
-          box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+          box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
           text-align: center;
           color: #fff;
           font-size: 36px;

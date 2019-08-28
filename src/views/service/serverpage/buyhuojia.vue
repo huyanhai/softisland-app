@@ -2,7 +2,7 @@
  * @Description:购买货架
  * @Author: hyh
  * @since: 2019-08-20 21:35:38
- * @lastTime: 2019-08-22 23:47:18
+ * @lastTime: 2019-08-28 11:33:05
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -136,7 +136,7 @@ export default {
         width: 100%;
         font-size: 28px;
         .ui-text {
-          font-size: 24px;
+          font-size: 26px;
           margin: 0;
           width: 100%;
           text-align: right;
@@ -147,7 +147,7 @@ export default {
         margin: 0;
         text-align: left;
         width: 100%;
-        font-size: 24px;
+        font-size: 26px;
       }
     }
   }
@@ -163,7 +163,7 @@ export default {
     background: $text-gary;
     &.active {
       background: $brand-red;
-      box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+      box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
     }
   }
   .dialog-bdc {

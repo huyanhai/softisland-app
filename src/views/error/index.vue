@@ -70,7 +70,7 @@ export default {
     }
   }
   .ui-text {
-    font-size: 24px;
+    font-size: 26px;
     color: $text-gary;
     display: block;
   }
@@ -86,7 +86,7 @@ export default {
     height: 60px;
     @include border-radius(60px);
     background: $brand-red;
-    box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+    box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
     font-size: 26px;
     line-height: 60px;
     color: $color-fff;

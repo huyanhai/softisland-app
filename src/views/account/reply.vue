@@ -2,7 +2,7 @@
  * @Description:回复评价
  * @Author: hyh
  * @since: 2019-08-14 21:52:28
- * @lastTime: 2019-08-24 22:17:27
+ * @lastTime: 2019-08-28 16:34:32
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -116,7 +116,7 @@
       </card>
     </div>
     <div class="tips">
-      温馨提示： 如果在账号出租中，发现租号方使用了外挂或者有违反约定的行为，您可以点击<a class="color-red" @click="complain">投诉</a>或<a class="color-red" @click="joinBlackList">拉入黑名单</a>
+      温馨提示： 如果在账号出租中，发现租号方使用了外挂或者有违反约定的行为，您可以点击<a class="color-orange" @click="complain">投诉</a>或<a class="color-orange" @click="joinBlackList">拉入黑名单</a>
     </div>
     <Totals :totalShow="totalShow" @totalHide="totalHide">
       <i slot="icon" class="iconfont icon-shibai"></i>
@@ -145,7 +145,7 @@ export default {
       gameRole: '一条会喊666的咸鱼',
       gameAcc: '1232312',
       reason: '',
-      picList: ['https://hbimg.huabanimg.com/664e34357078add647fbbe15002c838c492dcd6a4ec62-Wmzm4v_fw658', 'https://hbimg.huabanimg.com/664e34357078add647fbbe15002c838c492dcd6a4ec62-Wmzm4v_fw658', 'https://hbimg.huabanimg.com/664e34357078add647fbbe15002c838c492dcd6a4ec62-Wmzm4v_fw658', 'https://hbimg.huabanimg.com/664e34357078add647fbbe15002c838c492dcd6a4ec62-Wmzm4v_fw658'],
+      picList: ['https://hbimg.huabanimg.com/664e34357078add647fbbe15002c838c492dcd6a4ec62-Wmzm4v_fw658', 'https://hbimg.huabanimg.com/664e34357078add647fbbe15002c838c492dcd6a4ec62-Wmzm4v_fw658', 'https://hbimg.huabanimg.com/664e34357078add647fbbe15002c838c492dcd6a4ec62-Wmzm4v_fw658'],
       totalShow: false
     }
   },
@@ -194,7 +194,7 @@ export default {
     align-items: center;
     .ui-cancel {
       font-size: 26px;
-      color: $brand-yellow;
+      color: $brand-orange;
       margin-left: 20px;
     }
   }
@@ -218,7 +218,7 @@ export default {
         width: 100%;
         .con-text {
           margin: 20px 0;
-          font-size: 24px;
+          font-size: 26px;
           color: $text-lgary;
           line-height: 50px;
         }
@@ -233,7 +233,7 @@ export default {
         width: 150px;
         height: 50px;
         @include border-radius(50px);
-        font-size: 24px;
+        font-size: 26px;
         color: $brand-red;
         text-align: center;
         line-height: 50px;
@@ -248,7 +248,7 @@ export default {
       .tisp {
         text-align: center;
         font-size: 20px;
-        color: $brand-yellow;
+        color: $brand-orange;
         margin-top: 30px;
       }
       .van-radio-group {
@@ -259,7 +259,7 @@ export default {
         width: 190px;
         height: 60px;
         color: $text-dark;
-        font-size: 24px;
+        font-size: 26px;
         text-align: center;
         line-height: 60px;
         background: $line-gary;
@@ -289,10 +289,12 @@ export default {
       padding-top: 30px;
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 30px;
       .upload {
         width: 150px;
         height: 150px;
-        border: 1px dashed $line-gary;
+        border: 1px solid #e4e4e4;
         margin-bottom: 60px;
         margin-right: 30px;
         position: relative;
@@ -300,7 +302,7 @@ export default {
           position: absolute;
           width: 100%;
           bottom: -40px;
-          font-size: 24px;
+          font-size: 26px;
           text-align: center;
           font-style: normal;
           color: $text-dark;
@@ -316,7 +318,7 @@ export default {
         }
         .iconfont {
           position: absolute;
-          color: $brand-yellow;
+          color: $brand-orange;
           top: -14px;
           right: -14px;
           font-size: 30px;

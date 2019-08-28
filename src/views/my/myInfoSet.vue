@@ -143,7 +143,7 @@ export default {
     padding: 0 30px;
     .col {
       display: flex;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       align-items: center;
       justify-content: space-between;
       height: 80px;

@@ -2,7 +2,7 @@
  * @Description:账号事务
  * @Author: hyh
  * @since: 2019-08-20 21:35:38
- * @lastTime: 2019-08-21 22:19:18
+ * @lastTime: 2019-08-27 17:25:32
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -209,7 +209,7 @@ export default {
         display: block;
         position: absolute;
         height: 80%;
-        border-left: 1px solid $line-gary;
+        border-left: 1px dashed $line-gary;
         left: 33.33%;
       }
       &::after {
@@ -217,7 +217,7 @@ export default {
         display: block;
         position: absolute;
         height: 80%;
-        border-right: 1px solid $line-gary;
+        border-right: 1px dashed $line-gary;
         right: 33.33%;
       }
       .repeart-item {
@@ -226,14 +226,12 @@ export default {
         .ui-number {
           font-size: 30px;
           color: $text-dark;
-          font-family: $pf-bold;
           display: block;
           margin-bottom: 20px;
         }
         .text {
-          font-size: 24px;
+          font-size: 26px;
           color: $text-lgary;
-          font-family: $pf-light;
           margin: 0;
         }
       }
@@ -251,7 +249,7 @@ export default {
   .my-all-sell {
     margin: 30px;
     .sell-hd {
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
       display: flex;
       justify-content: center;
@@ -259,6 +257,8 @@ export default {
       .text {
         margin: 0;
         flex: 0 0 auto;
+        font-weight: bold;
+        font-size: 28px;
       }
       .tabs {
         flex: 1 0 auto;
@@ -298,7 +298,7 @@ export default {
           margin-bottom: 30px;
         }
         .text {
-          font-size: 24px;
+          font-size: 26px;
           line-height: 40px;
           color: $text-lgary;
         }

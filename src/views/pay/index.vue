@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-09 21:32:07
- * @lastTime: 2019-08-26 09:45:25
+ * @lastTime: 2019-08-27 14:26:50
  -->
 <template>
   <div class="pages page-pay">
@@ -82,7 +82,7 @@ export default {
       line-height: 90px;
       font-size: 28px;
       color: $text-dark;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
     }
     .choose-bd {
       margin: 40px 20px 70px 20px;

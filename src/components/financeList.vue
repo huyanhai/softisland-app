@@ -2,7 +2,7 @@
  * @Description:financeList
  * @Author: hyh
  * @since: 2019-08-19 20:53:45
- * @lastTime: 2019-08-19 22:05:17
+ * @lastTime: 2019-08-27 18:05:33
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -15,10 +15,10 @@
         <span class="col-box">
           <p class="col-list text col-row"><em class="name">交易类型：</em>{{item.payType}}</p>
           <p class="col-list text col-row"><em class="name">订单编号：</em>{{item.roleName}}</p>
-          <p class="col-list text clo-w6"><em class="name">发生日期：</em>{{item.time}}</p>
-          <p class="col-list text clo-w4"><em class="name">总资产：</em>{{item.totalMoney}}元</p>
+          <p class="col-list text col-row"><em class="name">发生日期：</em>{{item.time}}</p>
+          <p class="col-list text col-row"><em class="name">总资产：</em><em class="bold">{{item.totalMoney}}元</em></p>
         </span>
-        <span :class="['price',item.price > 0 ? 'price-add' : '']">{{item.price}}</span>
+        <span :class="['price',item.price > 0 ? 'price-add' : '']">{{item.price > 0 ? '+'+item.price : item.price}}</span>
       </div>
       <loadMore :showLoad="showLoad" />
     </template>
@@ -48,7 +48,7 @@ export default {
 .finance-list-c {
   box-sizing: border-box;
   @include border-radius(40px);
-  padding: 0 20px;
+  padding: 20px 30px;
   background: $color-fff;
   overflow: hidden;
   display: block;
@@ -58,11 +58,12 @@ export default {
     display: flex;
     height: 70px;
     line-height: 70px;
-    border-bottom: 1px solid $line-gary;
-    font-size: 24px;
+    border-bottom: 1px dashed $line-gary;
+    font-size: 26px;
     color: $text-dark;
     justify-content: space-between;
     align-items: center;
+    font-weight: bold;
     .text {
       margin: 0;
       width: 50%;
@@ -79,17 +80,29 @@ export default {
     .col-list {
       width: 50%;
       float: left;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
       line-height: 60px;
+      .bold {
+        font-weight: bold;
+        font-style: normal;
+        font-size: 28px;
+      }
       &.col-row {
         width: 100%;
+      }
+      &.clo-w7 {
+        width: 65%;
       }
       &.clo-w6 {
         width: 60%;
       }
       &.clo-w4 {
         width: 40%;
+        text-align: right;
+      }
+      &.clo-w3 {
+        width: 35%;
         text-align: right;
       }
       &.text {
@@ -104,9 +117,10 @@ export default {
   .price {
     position: absolute;
     right: 20px;
-    bottom: 80px;
-    font-size: 30px;
+    bottom: 40px;
+    font-size: 32px;
     color: $text-dark;
+    font-weight: bold;
     &.price-add {
       color: $brand-orange;
     }
@@ -121,7 +135,7 @@ export default {
     margin-bottom: 30px;
   }
   .text {
-    font-size: 24px;
+    font-size: 26px;
     line-height: 40px;
     color: $text-lgary;
   }

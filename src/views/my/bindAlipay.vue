@@ -2,7 +2,7 @@
  * @Description: 绑定支付宝
  * @Author: hyh
  * @since: 2019-08-24 16:53:26
- * @lastTime: 2019-08-24 21:56:26
+ * @lastTime: 2019-08-26 16:34:45
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -28,7 +28,7 @@
       <div class="col">
         <span class="col-l">已绑定手机号</span>
         <span class="col-r">
-          <input type="tel" v-model="phoneNo" class="ui-input" placeholder="请输入注册时的手机号码">
+          <input type="tel" v-model="phoneNo" disabled class="ui-input" placeholder="请输入注册时的手机号码">
         </span>
       </div>
       <div class="col">
@@ -50,13 +50,8 @@
     <a class="ui-link" :class="{active:active}" @click="bindFn">确认绑定</a>
     <p class="tips ui-text">
       温馨提示：<br>
-      1、按照国家政策要求，游戏玩家需要先进行实名认证，再进行游
-      戏相关交易；<br>
-      2、为了您顺畅的租号体验，请您尽快填写下方的身份信息，平台
-      会对您填写的信息严格保密。<br>
-      3、未满18岁的用户，禁止发布账号、下单操作。<br>
-      4、身份证信息只能提交一次，不能修改，请谨慎填写。
-
+      由于绑定支付宝必须与平台认证的实名信息一致，所以若您还没有<br>
+      进行实名认证，请先实名认证后再进行支付宝绑定操作。
     </p>
     <Totals :totalShow="totalShow" @totalHide="totalHide">
       <i slot="icon" class="iconfont" :class="tipsIcon"></i>
@@ -85,7 +80,7 @@ export default {
       },
       aliAcc: '',
       aliName: '',
-      phoneNo: '',
+      phoneNo: '12342322344',
       veriCode: '',
       payPwd: '',
       newPwd: '',
@@ -194,7 +189,7 @@ export default {
       width: 50%;
       background: none;
       border: none;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
     }
     .iconfont {
@@ -203,7 +198,7 @@ export default {
     }
     .label {
       flex: 0 0 auto;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
     }
     .switch {
@@ -221,22 +216,26 @@ export default {
     padding: 0 30px;
     .col {
       display: flex;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       align-items: center;
       justify-content: space-between;
       height: 80px;
       .col-l {
         font-size: 26px;
-        color: $text-dark;
+        color: $text-lgary;
         flex: 0 0 auto;
         width: 180px;
+        .ui-input {
+          color: $text-dark;
+        }
       }
       .col-r {
         flex: 1 0 auto;
         text-align: left;
-        margin: 0 30px;
+        margin: 0 20px;
         font-size: 26px;
         color: $text-lgary;
+        width: 30%;
         .ui-link {
           border: none;
           background: none;
@@ -248,6 +247,7 @@ export default {
           background: none;
           width: 100%;
           height: 100%;
+          color: $text-dark;
         }
         .col-r {
           margin: 0;
@@ -270,8 +270,9 @@ export default {
         transform: rotate(180deg);
       }
       .r-text {
-        font-size: 24px;
+        font-size: 26px;
         color: $brand-orange;
+        flex: 0 0 auto;
       }
     }
   }
@@ -280,6 +281,7 @@ export default {
     color: $brand-orange;
     margin: 0 30px;
     text-align: left;
+    padding-bottom: 10px;
     &.ui-text {
       color: $text-lgary;
       line-height: 40px;
@@ -297,7 +299,7 @@ export default {
     border-radius: 88px;
     &.active {
       background: $brand-red;
-      box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+      box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
     }
   }
 }

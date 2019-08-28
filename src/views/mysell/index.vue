@@ -2,7 +2,7 @@
  * @Description:我的出租账号
  * @Author: hyh
  * @since: 2019-08-12 22:22:39
- * @lastTime: 2019-08-17 11:26:26
+ * @lastTime: 2019-08-28 14:45:53
  -->
 <template>
   <div class="pages page-sell">
@@ -15,19 +15,19 @@
     <div class="acc-data-info">
       <ul class="ui-repeart">
         <li class="repeart-item">
-          <span class="ui-number">320</span>
+          <span class="ui-number __bold">320</span>
           <p class="text">账号数量</p>
         </li>
         <li class="repeart-item">
-          <span class="ui-number">100</span>
+          <span class="ui-number __bold">100</span>
           <p class="text">正在出租中</p>
         </li>
         <li class="repeart-item">
-          <span class="ui-number">￥20</span>
+          <span class="ui-number __bold">￥20</span>
           <p class="text">本月收入</p>
         </li>
         <li class="repeart-item">
-          <span class="ui-number">￥320</span>
+          <span class="ui-number __bold">￥320</span>
           <p class="text">累计收入</p>
         </li>
       </ul>
@@ -127,7 +127,7 @@ export default {
         display: block;
         position: absolute;
         width: 100%;
-        border-bottom: 1px solid $line-gary;
+        border-bottom: 1px dashed $line-gary;
         top: 50%;
         transform: translateY(-50%);
       }
@@ -136,7 +136,7 @@ export default {
         display: block;
         position: absolute;
         height: calc(100% - 30px);
-        border-right: 1px solid $line-gary;
+        border-right: 1px dashed $line-gary;
         left: 50%;
         transform: translateX(-50%);
         top: 15px;
@@ -149,14 +149,12 @@ export default {
         .ui-number {
           font-size: 30px;
           color: $text-dark;
-          font-family: $pf-bold;
           display: block;
           margin-bottom: 20px;
         }
         .text {
-          font-size: 24px;
+          font-size: 26px;
           color: $text-lgary;
-          font-family: $pf-light;
           margin: 0;
         }
       }
@@ -165,7 +163,7 @@ export default {
   .my-all-sell {
     margin: 30px;
     .sell-hd {
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
     }
     .sell-bd {
@@ -178,7 +176,7 @@ export default {
           margin-bottom: 30px;
         }
         .text {
-          font-size: 24px;
+          font-size: 26px;
           line-height: 40px;
           color: $text-lgary;
         }

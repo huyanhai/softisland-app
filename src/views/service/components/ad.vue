@@ -2,7 +2,7 @@
  * @Description: 广告
  * @Author: hyh
  * @since: 2019-08-22 22:07:26
- * @lastTime: 2019-08-23 18:14:33
+ * @lastTime: 2019-08-28 16:40:09
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -84,7 +84,10 @@ export default {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
+      &:last-child {
+        border-bottom: 0;
+      }
     }
     .r-bg {
       width: 70px;
@@ -99,7 +102,7 @@ export default {
       justify-content: center;
     }
     .col-text {
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
       margin-left: 20px;
     }
@@ -107,9 +110,12 @@ export default {
       width: 50%;
       flex: 1 0 auto;
       text-align: right;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-lgary;
       padding-right: 40px;
+    }
+    .iconfont {
+      font-size: 36px;
     }
     .more {
       transform: rotate(180deg);

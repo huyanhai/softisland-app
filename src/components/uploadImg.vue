@@ -68,7 +68,7 @@ export default {
     text-align: center;
     line-height: 88px;
     background: $brand-red;
-    box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+    box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
     @include border-radius(88px);
     margin: 0 auto;
     font-size: 36px;

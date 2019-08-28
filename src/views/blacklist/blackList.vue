@@ -2,13 +2,13 @@
  * @Description: 我的黑名单
  * @Author: hyh
  * @since: 2019-08-23 22:23:31
- * @lastTime: 2019-08-23 23:01:20
+ * @lastTime: 2019-08-27 16:31:45
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
   <div class="pages page-black-list">
     <div class="search-box white-bg">
-      <div class="search ">
+      <div class="search">
         <i class="iconfont icon-xingtaiduICON_sousuo---copy"></i>
         <input type="text" class="ui-input" name="" placeholder="试试输入游戏名称/角色名/货架号">
         <a class="link">搜索</a>
@@ -61,6 +61,7 @@ export default {
     .search {
       position: relative;
       height: 60px;
+      line-height: 60px;
       display: flex;
       align-items: center;
       background: $line-gary;
@@ -78,9 +79,8 @@ export default {
         background: none;
         border: 0;
         outline: 0;
-        font-size: 24px;
-        flex: 1 0 auto;
         font-size: 26px;
+        flex: 1 0 auto;
       }
       .link {
         font-size: 26px;

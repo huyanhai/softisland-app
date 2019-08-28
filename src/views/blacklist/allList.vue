@@ -175,9 +175,9 @@ export default {
       align-items: center;
       height: 80px;
       justify-content: space-between;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       .col {
-        font-size: 24px;
+        font-size: 26px;
         color: $text-lgary;
         text-align: center;
         &:first-child {
@@ -206,7 +206,7 @@ export default {
           margin-bottom: 20px;
         }
         .text {
-          font-size: 24px;
+          font-size: 26px;
           line-height: 40px;
           color: $text-lgary;
           display: block;
@@ -221,7 +221,7 @@ export default {
         width: 100%;
         flex: 0 0 auto;
         .col {
-          font-size: 24px;
+          font-size: 26px;
           color: $text-dark;
           text-align: center;
           &.link {

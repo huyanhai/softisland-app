@@ -2,7 +2,7 @@
  * @Description:订单投诉
  * @Author: hyh
  * @since: 2019-08-14 21:52:28
- * @lastTime: 2019-08-24 22:12:50
+ * @lastTime: 2019-08-27 15:47:12
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -100,7 +100,7 @@ export default {
     align-items: center;
     .ui-cancel {
       font-size: 26px;
-      color: $brand-yellow;
+      color: $brand-orange;
       margin-left: 20px;
     }
   }
@@ -133,7 +133,7 @@ export default {
         width: 190px;
         height: 60px;
         color: $text-dark;
-        font-size: 24px;
+        font-size: 26px;
         text-align: center;
         line-height: 60px;
         background: $line-gary;

@@ -62,7 +62,7 @@ export default {
     }
   }
   .kdxz {
-    font-size: 24px;
+    font-size: 26px;
     color: $text-dark;
     line-height: 36px;
     margin: 20px 0 0px 0;

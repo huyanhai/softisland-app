@@ -2,7 +2,7 @@
  * @Description:喇叭服务列表
  * @Author: hyh
  * @since: 2019-08-19 20:53:45
- * @lastTime: 2019-08-23 16:47:56
+ * @lastTime: 2019-08-27 18:14:37
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -16,7 +16,7 @@
         <span class="col-box">
           <p class="col-list text col-row"><em class="name">购买次数：</em>{{item.buyTimes}}次</p>
           <p class="col-list text col-row"><em class="name">剩余次数：</em>{{item.hasTimes}}次</p>
-          <p class="col-list text col-row"><em class="name">喇叭内容：</em>{{item.labaText}}</p>
+          <p class="col-list text col-row"><em class="name">喇叭内容：</em><em class="con">{{item.labaText}}</em></p>
         </span>
         <a class="buy cborder">删除喇叭</a>
         <a class="edit red-btn">喇叭续费</a>
@@ -65,11 +65,11 @@ export default {
       display: flex;
       height: 60px;
       line-height: 60px;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       .col-r {
         color: $text-lgary;
       }
@@ -89,10 +89,10 @@ export default {
     height: 60px;
     position: absolute;
     right: 30px;
-    bottom: 110px;
+    bottom: 120px;
     text-align: center;
     line-height: 60px;
-    font-size: 24px;
+    font-size: 26px;
     color: $color-fff;
     @include border-radius(60px);
     display: flex;
@@ -113,7 +113,7 @@ export default {
     color: $brand-red;
   }
   .edit {
-    bottom: 30px;
+    bottom: 40px;
   }
 
   .col-r {
@@ -131,14 +131,14 @@ export default {
 
     .col-list {
       width: 100%;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
       line-height: 60px;
       height: 60px;
       overflow: hidden;
       position: relative;
       display: flex;
-      align-items: center;
+      align-items: baseline;
       .iconfont {
         font-size: 40px;
         margin-right: 4px;
@@ -148,14 +148,25 @@ export default {
         }
       }
       &.col-row {
-        width: 70%;
+        width: 60%;
         display: flex;
-        overflow: hidden;
+        overflow: initial;
         white-space: nowrap;
         text-overflow: ellipsis;
+        height: initial;
+        max-height: 80px;
         .name {
           width: 120px;
           flex: 0 0 auto;
+        }
+        .con {
+          flex: 1 0 auto;
+          width: 50%;
+          font-style: normal;
+          overflow: hidden;
+          word-wrap: break-word;
+          white-space: normal;
+          line-height: 40px;
         }
       }
       &.clo-w6 {
@@ -174,7 +185,7 @@ export default {
       }
     }
     .line {
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       margin: 20px 0;
       height: 1px;
     }
@@ -200,7 +211,7 @@ export default {
     margin-bottom: 20px;
   }
   .text {
-    font-size: 24px;
+    font-size: 26px;
     line-height: 40px;
     color: $text-lgary;
     display: block;

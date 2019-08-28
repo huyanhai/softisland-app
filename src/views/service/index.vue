@@ -2,13 +2,13 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-08 23:15:10
- * @lastTime: 2019-08-23 23:34:43
+ * @lastTime: 2019-08-26 11:30:43
  -->
 <template>
   <div class="pages page-service">
     <div class="ui-pagebg"></div>
     <user-info />
-    <div class="m-service">
+    <div class="m-service white-bg">
       <ul class="ui-repeart">
         <li class="repeart-item" v-for="(item,index) in serverList" :key="index" @click="toPages(item)">
           <i class="ui-icon iconfont" :class="'icon-'+item.icon"></i>
@@ -91,7 +91,7 @@ export default {
           margin-bottom: 30px;
         }
         .ui-text {
-          font-size: 24px;
+          font-size: 26px;
           color: $text-dark;
         }
       }

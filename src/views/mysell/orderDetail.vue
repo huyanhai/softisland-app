@@ -2,7 +2,7 @@
  * @Description:订单详情
  * @Author: hyh
  * @since: 2019-08-14 21:52:28
- * @lastTime: 2019-08-17 21:08:39
+ * @lastTime: 2019-08-28 11:30:13
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -81,6 +81,9 @@
         </template>
       </card>
     </div>
+    <div class="tips">
+      温馨提示：<br> 如果账号在出租中，发现租号方使用了外挂或者有违反约定的行为，您可以点击投诉
+    </div>
     <div class="pic-show" v-if="showLayer">
       <img class="ui-img" :src="showingPic" />
     </div>
@@ -105,9 +108,9 @@ export default {
       gameServer: ' QQ手游-醉生梦死',
       roleName: '樱桃小丸子',
       gamePic: [
-        { src: require('./assets/images/game-pic.png') },
-        { src: require('./assets/images/game-pic.png') },
-        { src: require('./assets/images/game-pic.png') }
+        { src: 'https://hbimg.huabanimg.com/475cad753abe338f7585d3beb38b8f8bb8fe392a12652-tMg10B_fw658' },
+        { src: 'https://hbimg.huabanimg.com/475cad753abe338f7585d3beb38b8f8bb8fe392a12652-tMg10B_fw658' },
+        { src: 'https://hbimg.huabanimg.com/475cad753abe338f7585d3beb38b8f8bb8fe392a12652-tMg10B_fw658' }
       ],
       showingPic: '',
       showLayer: false
@@ -122,10 +125,10 @@ export default {
   },
   methods: {
     complaint () {
-      this.$router.push({ path: '/my/complain' })
+      this.$router.push({ path: '/blacklist/complain' })
     },
     joinBlack () {
-      this.$router.push({ path: '/my/black-list' })
+      this.$router.push({ path: '/blacklist/join-blacklist' })
     },
     showImg (e) {
       this.showingPic = e.src
@@ -146,7 +149,7 @@ export default {
     align-items: center;
     .ui-cancel {
       font-size: 26px;
-      color: $brand-yellow;
+      color: $brand-orange;
       margin-left: 20px;
     }
   }
@@ -189,7 +192,6 @@ export default {
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    background: #fff;
     overflow: hidden;
     z-index: 1001;
     display: flex;
@@ -199,6 +201,12 @@ export default {
     .ui-img {
       width: 200%;
     }
+  }
+  .tips {
+    margin: 40px 30px;
+    font-size: 22px;
+    color: $text-lgary;
+    line-height: 40px;
   }
 }
 </style>

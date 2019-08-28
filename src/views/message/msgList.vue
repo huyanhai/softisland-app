@@ -2,7 +2,7 @@
  * @Description: 我的客户
  * @Author: hyh
  * @since: 2019-08-24 09:49:55
- * @lastTime: 2019-08-24 10:52:44
+ * @lastTime: 2019-08-27 17:14:45
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -42,6 +42,7 @@ export default {
       this.$emit('changTitle', this.barTitle)
       this.$emit('footer', false)
     }, 100)
+    this.$emit('header', false)
   },
   destroyed () {
     this.$emit('changTitle', '消息通知')

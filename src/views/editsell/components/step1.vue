@@ -2,7 +2,7 @@
  * @Description:step1
  * @Author: hyh
  * @since: 2019-08-14 21:52:28
- * @lastTime: 2019-08-16 21:00:50
+ * @lastTime: 2019-08-28 14:52:59
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -17,12 +17,12 @@
         </li>
         <li class="info-item">
           <span class="label">游戏大区</span>
-          <input class="ui-input" disabled type="text" name="" v-model="stepOneData.gameRegin" placeholder="请选择游戏">
+          <input class="ui-input" disabled type="text" name="" v-model="stepOneData.gameRegin" placeholder="请选择游戏区服">
           <i class="iconfont icon-fanhui"></i>
         </li>
         <li class="info-item">
           <span class="label">服务器</span>
-          <input class="ui-input" disabled type="text" name="" v-model="stepOneData.gameServer" placeholder="请选择游戏">
+          <input class="ui-input" disabled type="text" name="" v-model="stepOneData.gameServer" placeholder="请选择游戏服务器">
           <i class="iconfont icon-fanhui"></i>
         </li>
       </ul>
@@ -75,7 +75,8 @@ export default {
     color: $text-dark;
     height: 100px;
     line-height: 100px;
-    border-bottom: 1px solid $line-gary;
+    border-bottom: 1px dashed $line-gary;
+    font-weight: bold;
   }
   .info-bd {
     .info-item {
@@ -83,7 +84,10 @@ export default {
       align-items: center;
       height: 80px;
       line-height: 80px;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
+      &:last-child {
+        border-bottom: 1px dashed $line-gary !important;
+      }
       .label {
         font-size: 26px;
         color: $text-lgary;
@@ -115,7 +119,7 @@ export default {
     color: $color-fff;
     font-size: 36px;
     background: $brand-red;
-    box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+    box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
     @include border-radius(88px);
   }
 }

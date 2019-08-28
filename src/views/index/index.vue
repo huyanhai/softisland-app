@@ -2,13 +2,13 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-08 14:16:02
- * @lastTime: 2019-08-17 20:20:10
+ * @lastTime: 2019-08-26 17:11:08
  -->
 <template>
   <div class="pages page-index">
     <div class="ui-pagebg"></div>
     <user-info />
-    <div class="acc-data-info">
+    <div class="acc-data-info white-bg">
       <ul class="ui-repeart">
         <li class="repeart-item">
           <span class="ui-number">320</span>
@@ -30,7 +30,7 @@
     </div>
     <div class="equity-list">
       <ul class="ui-repeart">
-        <li class="repeart-item">
+        <li class="repeart-item white-bg">
           <span class="icon-bg">
             <i class="iconfont ui-icon icon-shanghuliebiao"></i>
           </span>
@@ -38,7 +38,7 @@
           <p class="text" v-else>成为商户立享无限上架等特权</p>
           <a class="link cborder">立即开通</a>
         </li>
-        <li class="repeart-item">
+        <li class="repeart-item white-bg">
           <span class="icon-bg">
             <i class="iconfont ui-icon icon-tousu"></i>
           </span>
@@ -46,7 +46,7 @@
           <p class="text" v-else>您的账号尚未存在投诉情况</p>
           <a class="link cborder">前往查看</a>
         </li>
-        <li class="repeart-item">
+        <li class="repeart-item white-bg">
           <span class="icon-bg">
             <i class="iconfont ui-icon icon-naozhongshijianjishitixingxianshitongzhimianxing"></i>
           </span>
@@ -116,7 +116,7 @@ export default {
         display: block;
         position: absolute;
         width: 100%;
-        border-bottom: 1px solid $line-gary;
+        border-bottom: 1px dashed $line-gary;
         top: 50%;
         transform: translateY(-50%);
       }
@@ -125,7 +125,7 @@ export default {
         display: block;
         position: absolute;
         height: calc(100% - 30px);
-        border-right: 1px solid $line-gary;
+        border-right: 1px dashed $line-gary;
         left: 50%;
         transform: translateX(-50%);
         top: 15px;
@@ -138,14 +138,13 @@ export default {
         .ui-number {
           font-size: 30px;
           color: $text-dark;
-          font-family: $pf-bold;
           display: block;
           margin-bottom: 20px;
         }
         .text {
-          font-size: 24px;
+          font-size: 26px;
           color: $text-lgary;
-          font-family: $pf-light;
+
           margin: 0;
         }
       }
@@ -186,10 +185,9 @@ export default {
         }
         .text {
           color: $text-dark;
-          font-size: 24px;
+          font-size: 26px;
           flex: 1 0 auto;
           margin-left: 30px;
-          font-family: $pf-reg;
           line-height: 40px;
           .red {
             color: $brand-red;
@@ -201,7 +199,7 @@ export default {
           width: 150px;
           height: 50px;
           @include border-radius(50px);
-          font-size: 24px;
+          font-size: 26px;
           color: $brand-red;
           text-align: center;
           line-height: 50px;

@@ -2,7 +2,7 @@
  * @Description:rentalList
  * @Author: hyh
  * @since: 2019-08-13 21:16:25
- * @lastTime: 2019-08-17 20:02:11
+ * @lastTime: 2019-08-27 17:18:50
  -->
 <template>
   <div class="rental-list-c">
@@ -48,7 +48,7 @@ export default {
 .rental-list-c {
   box-sizing: border-box;
   @include border-radius(40px);
-  padding: 0 20px;
+  padding: 0 30px;
   background: $color-fff;
   overflow: hidden;
   display: block;
@@ -58,16 +58,19 @@ export default {
     display: flex;
     height: 70px;
     line-height: 70px;
-    border-bottom: 1px solid $line-gary;
-    font-size: 24px;
+    border-bottom: 1px dashed $line-gary;
+    font-size: 26px;
     color: $text-dark;
     justify-content: space-between;
     align-items: center;
+    font-weight: bold;
     .text {
       margin: 0;
       width: 50%;
       &.al-r {
         text-align: right;
+        color: $text-lgary;
+        font-weight: normal;
       }
     }
   }
@@ -77,13 +80,13 @@ export default {
     display: block;
     clear: both;
     .line {
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       margin: 20px 0;
       height: 1px;
     }
     .col-list {
       width: 100%;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
       line-height: 60px;
       overflow: hidden;
@@ -114,7 +117,7 @@ export default {
     bottom: 110px;
     text-align: center;
     line-height: 60px;
-    font-size: 24px;
+    font-size: 26px;
     color: $brand-red;
     @include border-radius(60px);
     display: flex;

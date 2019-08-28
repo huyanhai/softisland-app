@@ -2,7 +2,7 @@
  * @Description: 设置信息
  * @Author: hyh
  * @since: 2019-08-24 16:53:26
- * @lastTime: 2019-08-24 22:01:43
+ * @lastTime: 2019-08-27 15:57:26
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -22,7 +22,7 @@
       <i class="iconfont icon-shanchu" @click="clean"></i>
     </div>
     <div class="set-box white-bg" v-if="type==='msgPush'">
-      <span class="label">限时货架</span>
+      <span class="label">消息推送通知</span>
       <span class="switch">
         <van-switch v-model="pushMsg" active-color="#1dbf60" class="ui-switch" />
       </span>
@@ -162,6 +162,7 @@ export default {
       font-size: 26px;
       color: $brand-orange;
       margin-left: 20px;
+      background: none !important;
     }
   }
   .set-box {
@@ -179,7 +180,7 @@ export default {
       width: 50%;
       background: none;
       border: none;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
     }
     .iconfont {
@@ -188,8 +189,8 @@ export default {
     }
     .label {
       flex: 0 0 auto;
-      font-size: 24px;
-      color: $text-dark;
+      font-size: 26px;
+      color: $text-lgary;
       margin-right: 20px;
     }
     .switch {
@@ -215,6 +216,10 @@ export default {
       .ui-link {
         color: $brand-orange;
         text-decoration: underline;
+        background: none;
+        display: inline;
+        font-size: 22px;
+        margin: 0;
       }
     }
     .switch {
@@ -228,7 +233,7 @@ export default {
   }
   .tips {
     font-size: 20px;
-    color: $brand-yellow;
+    color: $brand-orange;
     margin: 0 30px;
   }
   .ui-link {
@@ -243,7 +248,7 @@ export default {
     border-radius: 88px;
     &.active {
       background: $brand-red;
-      box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+      box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
     }
   }
 }

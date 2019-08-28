@@ -30,7 +30,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 26px;
   color: $text-gary;
   .iconfont {
     margin-right: 10px;

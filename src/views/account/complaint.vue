@@ -2,7 +2,7 @@
  * @Description:回复评价
  * @Author: hyh
  * @since: 2019-08-14 21:52:28
- * @lastTime: 2019-08-21 21:43:29
+ * @lastTime: 2019-08-28 16:37:58
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -20,31 +20,31 @@
         <template slot="card-bd">
           <ul class="info-bd">
             <li class="info-item col-5 no-border">
-              <span class="label">订单号：</span>
+              <span class="label">订单号</span>
               <input class="ui-input" type="text" name="" v-model="orderNo" placeholder="">
             </li>
             <li class="info-item col-5 no-border">
-              <span class="label">租客：</span>
+              <span class="label">租客</span>
               <input class="ui-input" type="text" name="" v-model="zkinfo" placeholder="">
             </li>
             <li class="info-item col-5 no-border">
-              <span class="label">订单租金：</span>
+              <span class="label">订单租金</span>
               <input class="ui-input" type="text" name="" v-model="orderPay" placeholder="">
             </li>
             <li class="info-item col-5 no-border">
-              <span class="label">订单押金：</span>
+              <span class="label">订单押金</span>
               <input class="ui-input" type="text" name="" v-model="orderYj" placeholder="">
             </li>
             <li class="info-item no-border">
-              <span class="label">订单状态：</span>
+              <span class="label">订单状态</span>
               <input class="ui-input" type="text" name="" v-model="status" placeholder="">
             </li>
             <li class="info-item no-border">
-              <span class="label">开始时间：</span>
+              <span class="label">开始时间</span>
               <input class="ui-input" type="text" name="" v-model="beginTime" placeholder="">
             </li>
             <li class="info-item no-border">
-              <span class="label">结束时间：</span>
+              <span class="label">结束时间</span>
               <input class="ui-input" type="text" name="" v-model="endTime" placeholder="">
             </li>
           </ul>
@@ -211,7 +211,7 @@ export default {
     align-items: center;
     .ui-cancel {
       font-size: 26px;
-      color: $brand-yellow;
+      color: $brand-orange;
       margin-left: 20px;
     }
   }
@@ -233,9 +233,10 @@ export default {
       .info-item {
         float: left;
         width: 100%;
+        height: 70px;
         .con-text {
           margin: 20px 0;
-          font-size: 24px;
+          font-size: 26px;
           color: $text-lgary;
           line-height: 50px;
         }
@@ -250,7 +251,7 @@ export default {
         width: 150px;
         height: 50px;
         @include border-radius(50px);
-        font-size: 24px;
+        font-size: 26px;
         color: $brand-red;
         text-align: center;
         line-height: 50px;
@@ -276,7 +277,7 @@ export default {
         width: 190px;
         height: 60px;
         color: $text-dark;
-        font-size: 24px;
+        font-size: 26px;
         text-align: center;
         line-height: 60px;
         background: $line-gary;
@@ -309,7 +310,7 @@ export default {
       .upload {
         width: 150px;
         height: 150px;
-        border: 1px dashed $line-gary;
+        border: 1px solid #e4e4e4;
         margin-bottom: 60px;
         margin-right: 30px;
         position: relative;
@@ -317,7 +318,7 @@ export default {
           position: absolute;
           width: 100%;
           bottom: -40px;
-          font-size: 24px;
+          font-size: 26px;
           text-align: center;
           font-style: normal;
           color: $text-dark;
@@ -370,7 +371,7 @@ export default {
       width: 150px;
       height: 60px;
       color: $text-dark;
-      font-size: 24px;
+      font-size: 26px;
       text-align: center;
       line-height: 60px;
       background: $line-gary;

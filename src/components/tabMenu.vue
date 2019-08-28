@@ -2,7 +2,7 @@
  * @Description:tabMenu
  * @Author: hyh
  * @since: 2019-08-19 20:43:22
- * @lastTime: 2019-08-19 21:02:13
+ * @lastTime: 2019-08-28 16:25:00
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -38,7 +38,7 @@ export default {
   height: 88px;
   @include border-radius(88px);
   overflow: hidden;
-  margin: 20px auto 0 auto;
+  margin: 45px auto 0 auto;
   display: flex;
   .link {
     width: 50%;
@@ -46,6 +46,12 @@ export default {
     font-size: 30px;
     color: $text-dark;
     line-height: 88px;
+    height: 87px;
+    overflow: hidden;
+    background: #fff;
+    border-bottom: #fff;
+    box-sizing: border-box;
+    display: block;
     &.active {
       background: $brand-red;
       color: $color-fff;

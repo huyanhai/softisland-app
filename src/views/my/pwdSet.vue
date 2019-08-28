@@ -2,7 +2,7 @@
  * @Description: 修改支付密码
  * @Author: hyh
  * @since: 2019-08-24 16:53:26
- * @lastTime: 2019-08-24 19:55:19
+ * @lastTime: 2019-08-27 14:23:53
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -133,7 +133,7 @@ export default {
       width: 50%;
       background: none;
       border: none;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
     }
     .iconfont {
@@ -142,7 +142,7 @@ export default {
     }
     .label {
       flex: 0 0 auto;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
     }
     .switch {
@@ -154,21 +154,21 @@ export default {
     }
   }
   .m-info {
-    margin: 30px;
+    margin: 30px 30px 20px 30px;
     border-radius: 40px;
     overflow: hidden;
     padding: 0 30px;
     .col {
       display: flex;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       align-items: center;
       justify-content: space-between;
       height: 80px;
       .col-l {
         font-size: 26px;
-        color: $text-dark;
+        color: $text-lgary;
         flex: 0 0 auto;
-        width: 120px;
+        width: 110px;
       }
       .col-r {
         width: 50%;
@@ -182,9 +182,13 @@ export default {
           background: none;
           width: 100%;
           height: 100%;
+          color: $text-dark;
         }
         .col-r {
           margin: 0;
+          .iconfont {
+            font-size: 30px;
+          }
         }
         .ui-img {
           width: 60px;
@@ -198,6 +202,7 @@ export default {
       }
       .iconfont {
         color: $text-lgary;
+        font-size: 30px;
       }
     }
   }

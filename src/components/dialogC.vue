@@ -2,7 +2,7 @@
  * @Description:dialog弹窗
  * @Author: hyh
  * @since: 2019-08-17 10:58:09
- * @lastTime: 2019-08-21 22:46:11
+ * @lastTime: 2019-08-28 14:51:02
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -62,9 +62,11 @@ export default {
       text-align: center;
       font-size: 30px;
       color: $text-dark;
+      font-weight: bold;
+      margin-top: 20px;
     }
     .dialog-bd {
-      padding: 30px;
+      padding: 0px 30px 20px 30px;
       font-size: 26px;
       color: $text-lgary;
       line-height: 44px;
@@ -74,7 +76,7 @@ export default {
       line-height: 100px;
       text-align: center;
       font-size: 28px;
-      color: $brand-orange;
+      color: $brand-red;
       border-top: 1px solid $line-gary;
       display: flex;
       align-items: center;

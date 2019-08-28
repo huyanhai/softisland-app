@@ -2,7 +2,7 @@
  * @Description: 全局公共样式
  * @Author: hyh
  * @since: 2019-08-08 15:09:50
- * @lastTime: 2019-08-23 22:48:48
+ * @lastTime: 2019-08-28 16:49:45
  */
 
 body {
@@ -16,14 +16,43 @@ body,
 #app {
   height: 100%;
 }
-input {
+input,
+textarea {
   border: none;
+  height: 100%;
+  line-height: initial;
+  padding: 0;
   &::-webkit-input-placeholder {
     color: $text-gary;
+  }
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+  }
+  &:disabled {
+    color: $text-lgary !important;
+    opacity: 1 !important;
+    -webkit-opacity: 1 !important;
+    -webkit-text-fill-color: $text-lgary !important;
   }
 }
 .pages {
   padding-bottom: 120px;
+}
+
+.icon-fanhui {
+  font-size: 30px !important;
+}
+
+.bar-left {
+  .icon-fanhui {
+    font-size: 40px !important;
+  }
+}
+
+.__bold {
+  font-weight: bold;
 }
 
 .cborder {
@@ -36,7 +65,7 @@ input {
 
 .red-btn {
   background: $brand-red;
-  box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+  box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
 }
 
 .white-bg {
@@ -47,4 +76,27 @@ input {
 .color-red {
   font-style: normal;
   color: $brand-yellow;
+}
+
+.color-orange {
+  font-style: normal;
+  color: $brand-orange;
+}
+
+.game-info .info-bd .info-item {
+  &:last-child {
+    border-bottom: 0 !important;
+  }
+}
+
+.m-info .col {
+  &:last-child {
+    border-bottom: 0 !important;
+  }
+}
+
+.bar-right {
+  .iconfont {
+    color: $brand-yellow !important;
+  }
 }

@@ -60,11 +60,11 @@ export default {
       display: flex;
       height: 60px;
       line-height: 60px;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       .col-r {
         color: $text-lgary;
       }
@@ -87,7 +87,7 @@ export default {
     bottom: 110px;
     text-align: center;
     line-height: 60px;
-    font-size: 24px;
+    font-size: 26px;
     color: $color-fff;
     @include border-radius(60px);
     display: flex;
@@ -118,7 +118,7 @@ export default {
     clear: both;
     .col-list {
       width: 100%;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
       line-height: 60px;
       height: 60px;
@@ -142,7 +142,7 @@ export default {
     }
 
     .line {
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       margin: 20px 0;
       height: 1px;
     }
@@ -168,7 +168,7 @@ export default {
     margin-bottom: 20px;
   }
   .text {
-    font-size: 24px;
+    font-size: 26px;
     line-height: 40px;
     color: $text-lgary;
     display: block;

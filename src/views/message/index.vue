@@ -2,12 +2,12 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-10 20:51:07
- * @lastTime: 2019-08-24 10:50:55
+ * @lastTime: 2019-08-27 17:13:36
  -->
 <template>
   <div class="pages page-message">
-    <head-bar :barTitle="barTitle"></head-bar>
-    <router-view @footer="footerFn" @changTitle="changTitle" />
+    <head-bar :barTitle="barTitle" :titleHide="titleHide"></head-bar>
+    <router-view @footer="footerFn" @changTitle="changTitle" v-on:header='header' />
   </div>
 </template>
 <script>
@@ -16,7 +16,8 @@ export default {
   name: 'message',
   data () {
     return {
-      barTitle: '消息通知'
+      barTitle: '消息通知',
+      titleHide: false
     }
   },
   components: {
@@ -26,6 +27,9 @@ export default {
     this.$emit('footer', true)
   },
   methods: {
+    header (bool) {
+      this.titleHide = bool
+    },
     toDetail (e) {
       this.$router.push({
         path: '/message/detail'

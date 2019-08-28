@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-09 22:35:46
- * @lastTime: 2019-08-10 19:29:32
+ * @lastTime: 2019-08-26 14:36:35
  -->
 <template>
   <div class="m-pay-money">
@@ -89,7 +89,7 @@ export default {
 }
 .m-pay-money {
   padding: 30px 60px 40px 60px;
-  @include linder-top-bottom(#fa0049, #ff6f61);
+  background: linear-gradient(to bottom, #ff1e58 0%, #ff9670 80%);
   @include border-radius(40px);
   overflow: hidden;
   .pay-input {
@@ -129,7 +129,7 @@ export default {
     font-size: 36px;
     text-align: center;
     color: $color-fff;
-    box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+    box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
   }
 }
 </style>

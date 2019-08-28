@@ -2,7 +2,7 @@
  * @Description:我的黑名单列表
  * @Author: hyh
  * @since: 2019-08-19 20:53:45
- * @lastTime: 2019-08-23 23:00:03
+ * @lastTime: 2019-08-26 15:26:23
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -67,11 +67,11 @@ export default {
       display: flex;
       height: 60px;
       line-height: 60px;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       .col-r {
         color: $text-lgary;
         text-align: right;
@@ -90,14 +90,14 @@ export default {
       align-items: center;
       justify-content: center;
       height: 120px;
-      border-top: 1px solid $line-gary;
+      border-top: 1px dashed $line-gary;
       .link {
         box-sizing: border-box;
         height: 60px;
         text-align: center;
         line-height: 60px;
         color: $color-fff;
-        font-size: 24px;
+        font-size: 26px;
         width: 180px;
         border-radius: 60px;
         margin: 0 20px;
@@ -116,7 +116,7 @@ export default {
     bottom: 110px;
     text-align: center;
     line-height: 60px;
-    font-size: 24px;
+    font-size: 26px;
     color: $color-fff;
     @include border-radius(60px);
     display: flex;
@@ -158,7 +158,7 @@ export default {
     }
     .col-list {
       width: 100%;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
       line-height: 60px;
       overflow: hidden;
@@ -182,7 +182,7 @@ export default {
     }
 
     .line {
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       margin: 20px 0;
       height: 1px;
     }
@@ -208,7 +208,7 @@ export default {
     margin-bottom: 20px;
   }
   .text {
-    font-size: 24px;
+    font-size: 26px;
     line-height: 40px;
     color: $text-lgary;
     display: block;

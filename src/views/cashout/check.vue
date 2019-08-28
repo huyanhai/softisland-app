@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-09 21:32:07
- * @lastTime: 2019-08-10 17:26:40
+ * @lastTime: 2019-08-27 15:02:59
  -->
 <template>
   <div class="pages page-pay">
@@ -18,12 +18,12 @@
               <p class="info">61298321@QQ.COM</p>
             </li>
             <li class="repeart-item">
-              <i class="iconfont icon-zhifubao"></i>
+              <i class="iconfont icon-xingming"></i>
               <p class="text">姓名：</p>
               <p class="info">邓歆</p>
             </li>
             <li class="repeart-item">
-              <i class="iconfont icon-zhifubao"></i>
+              <i class="iconfont icon-tixian"></i>
               <p class="text">当前可提现金额：</p>
               <p class="info"><em class="color">0.00</em>元</p>
             </li>
@@ -35,9 +35,7 @@
         <div class="pay-bd">
           <tab-nav :tabTitle="tabTitle">
             <payMoney :payText="payText" :payMoneyMode="payMoneyMode" :tispText="'请输入提现金额（20元起提）'" :payMoney="payMoney" :canCashMoney="canCashMoney" @onPayBtn="onPay" slot="tab0" />
-            <template slot="tab1">
-              <p class="no-data">暂无内容</p>
-            </template>
+            <payMoney :payText="payText" :payMoneyMode="payMoneyMode" :tispText="'请输入提现金额（20元起提）'" :payMoney="payMoney" :canCashMoney="canCashMoney" @onPayBtn="onPay" slot="tab1" />
           </tab-nav>
         </div>
       </div>
@@ -107,7 +105,8 @@ export default {
       line-height: 90px;
       font-size: 28px;
       color: $text-dark;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
+      font-weight: bold;
     }
     .choose-bd {
       margin: 40px 0px;
@@ -123,13 +122,14 @@ export default {
           .iconfont {
             font-size: 26px;
             color: $brand-yellow;
+            margin-right: 10px;
           }
           .text {
-            font-size: 24px;
+            font-size: 26px;
             color: $text-lgary;
           }
           .info {
-            font-size: 24px;
+            font-size: 26px;
             color: $text-dark;
             .color {
               color: $brand-orange;
@@ -149,7 +149,8 @@ export default {
       font-size: 28px;
       color: $text-dark;
       margin: 0 30px;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
+      font-weight: bold;
     }
     .pay-bd {
       .tab-nav-hd {

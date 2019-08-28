@@ -2,7 +2,7 @@
  * @Description:step1
  * @Author: hyh
  * @since: 2019-08-14 21:52:28
- * @lastTime: 2019-08-16 21:01:19
+ * @lastTime: 2019-08-28 14:58:42
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -134,11 +134,13 @@ export default {
     color: $text-dark;
     height: 100px;
     line-height: 100px;
-    border-bottom: 1px solid $line-gary;
+    border-bottom: 1px dashed $line-gary;
     margin-top: 20px;
+    font-weight: bold;
     .text {
-      font-size: 24px;
+      font-size: 26px;
       color: $text-lgary;
+      font-weight: normal;
     }
     &:first-child {
       margin-top: 0;
@@ -153,7 +155,10 @@ export default {
       align-items: center;
       height: 80px;
       line-height: 80px;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
+      &:last-child {
+        border-bottom: 1px dashed $line-gary !important;
+      }
       &.textarea-item {
         height: initial;
         align-items: baseline;
@@ -163,7 +168,7 @@ export default {
         color: $text-lgary;
         width: 130px;
         flex: 0 0 auto;
-        margin-right: 20px;
+        margin-right: 10px;
       }
       .ui-input {
         flex: 1 0 auto;
@@ -188,7 +193,7 @@ export default {
       .upload {
         width: 150px;
         height: 150px;
-        border: 1px dashed $line-gary;
+        border: 1px solid #e4e4e4;
         margin-bottom: 20px;
         margin-right: 30px;
         position: relative;
@@ -232,7 +237,7 @@ export default {
     color: $color-fff;
     font-size: 36px;
     background: $brand-red;
-    box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+    box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
     @include border-radius(88px);
   }
 }
@@ -254,7 +259,7 @@ export default {
     text-align: center;
     line-height: 88px;
     background: $brand-red;
-    box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+    box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
     @include border-radius(88px);
     margin: 0 auto;
     font-size: 36px;

@@ -95,7 +95,7 @@ export default {
             background: $brand-orange;
             overflow: hidden;
             color: $color-fff;
-            font-size: 24px;
+            font-size: 26px;
             flex: 0 0 auto;
             text-align: center;
             line-height: 40px;
@@ -124,7 +124,7 @@ export default {
           }
         }
         .__bd {
-          font-size: 24px;
+          font-size: 26px;
           color: $text-dark;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -143,7 +143,7 @@ export default {
       margin-bottom: 20px;
     }
     .text {
-      font-size: 24px;
+      font-size: 26px;
       line-height: 40px;
       color: $text-lgary;
       display: block;

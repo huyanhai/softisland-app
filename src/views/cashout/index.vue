@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-09 21:32:07
- * @lastTime: 2019-08-22 14:04:23
+ * @lastTime: 2019-08-26 17:15:05
  -->
 <template>
   <div class="pages page-pay">
@@ -125,19 +125,20 @@ export default {
         height: 98px;
         line-height: 98px;
         overflow: hidden;
-        border-bottom: 1px solid $line-gary;
+        border-bottom: 1px dashed $line-gary;
         position: relative;
         .text {
-          font-size: 24px;
+          font-size: 26px;
           color: $text-lgary;
           flex: 0 0 auto;
         }
         .ui-input {
           flex: 1 0 auto;
           width: 50%;
-          font-size: 24px;
+          font-size: 26px;
           color: $text-dark;
           border: none;
+          line-height: 98px;
           &::-webkit-input-placeholder {
             color: $text-gary;
           }
@@ -150,7 +151,7 @@ export default {
           color: $brand-red;
           position: absolute;
           right: 0;
-          font-size: 24px;
+          font-size: 26px;
           margin: 0;
         }
       }
@@ -164,7 +165,7 @@ export default {
         font-size: 36px;
         @include border-radius(88px);
         background: $brand-red;
-        box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+        box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
       }
     }
   }

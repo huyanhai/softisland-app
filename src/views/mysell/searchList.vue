@@ -87,7 +87,7 @@ export default {
         color: $text-gary;
       }
       .ui-text {
-        font-size: 24px;
+        font-size: 26px;
         color: $text-gary;
         line-height: 40px;
       }

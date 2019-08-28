@@ -2,7 +2,7 @@
  * @Description:我的财务
  * @Author: hyh
  * @since: 2019-08-12 22:22:39
- * @lastTime: 2019-08-23 22:14:36
+ * @lastTime: 2019-08-27 16:04:18
  -->
 <template>
   <div class="pages page-finance">
@@ -66,7 +66,7 @@ export default {
       active: 0,
       menuInfo: [
         { text: '账单', path: '/finance/order', icon: 'fcstubiao06', dot: false },
-        { text: '服务', path: '/finance/server', icon: 'tongji', dot: false }
+        { text: '统计', path: '/finance/server', icon: 'tongji', dot: false }
       ],
       tabs: [
         { text: '全部', value: 1 },
@@ -145,7 +145,7 @@ export default {
         display: block;
         position: absolute;
         height: 80%;
-        border-left: 1px solid $line-gary;
+        border-left: 1px dashed $line-gary;
         left: 33.33%;
       }
       &::after {
@@ -153,7 +153,7 @@ export default {
         display: block;
         position: absolute;
         height: 80%;
-        border-right: 1px solid $line-gary;
+        border-right: 1px dashed $line-gary;
         right: 33.33%;
       }
       .repeart-item {
@@ -162,14 +162,12 @@ export default {
         .ui-number {
           font-size: 30px;
           color: $text-dark;
-          font-family: $pf-bold;
           display: block;
           margin-bottom: 20px;
         }
         .text {
-          font-size: 24px;
+          font-size: 26px;
           color: $text-lgary;
-          font-family: $pf-light;
           margin: 0;
         }
       }

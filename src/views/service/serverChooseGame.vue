@@ -2,7 +2,7 @@
  * @Description:选择游戏
  * @Author: hyh
  * @since: 2019-08-20 21:35:38
- * @lastTime: 2019-08-22 15:22:49
+ * @lastTime: 2019-08-26 16:54:56
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -56,6 +56,9 @@ export default {
   }
   .search-game {
     margin-top: 30px;
+    .bar-ft {
+      height: 1000px;
+    }
   }
 }
 </style>

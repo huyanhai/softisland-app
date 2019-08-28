@@ -2,7 +2,7 @@
  * @Description:申请理赔
  * @Author: hyh
  * @since: 2019-08-14 21:52:28
- * @lastTime: 2019-08-21 16:06:59
+ * @lastTime: 2019-08-27 17:37:12
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -117,7 +117,7 @@ export default {
       gameServer: '',
       gameRole: '',
       gameAcc: '',
-      picList: [undefined, undefined, undefined, undefined],
+      picList: [undefined, undefined, undefined],
       show: false,
       index: 0,
       totalShow: false,
@@ -186,7 +186,7 @@ export default {
     align-items: center;
     .ui-cancel {
       font-size: 26px;
-      color: $brand-yellow;
+      color: $brand-orange;
       margin-left: 20px;
     }
   }
@@ -210,7 +210,7 @@ export default {
         width: 150px;
         height: 50px;
         @include border-radius(50px);
-        font-size: 24px;
+        font-size: 26px;
         color: $brand-red;
         text-align: center;
         line-height: 50px;
@@ -235,7 +235,7 @@ export default {
         width: 190px;
         height: 60px;
         color: $text-dark;
-        font-size: 24px;
+        font-size: 26px;
         text-align: center;
         line-height: 60px;
         background: $line-gary;
@@ -265,18 +265,23 @@ export default {
       padding-top: 30px;
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 30px;
       .upload {
         width: 150px;
         height: 150px;
-        border: 1px dashed $line-gary;
+        border: 1px solid #e4e4e4;
         margin-bottom: 60px;
         margin-right: 30px;
         position: relative;
+        &:last-child {
+          margin-right: 0;
+        }
         .name {
           position: absolute;
           width: 100%;
           bottom: -40px;
-          font-size: 24px;
+          font-size: 26px;
           text-align: center;
           font-style: normal;
           color: $text-dark;
@@ -347,7 +352,7 @@ export default {
       text-align: center;
       line-height: 88px;
       background: $brand-red;
-      box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+      box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
       @include border-radius(88px);
       margin: 0 auto;
       font-size: 36px;

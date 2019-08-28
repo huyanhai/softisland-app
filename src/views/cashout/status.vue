@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-10 10:22:30
- * @lastTime: 2019-08-10 16:42:07
+ * @lastTime: 2019-08-26 17:09:47
  -->
 <template>
   <div class="pages page-pay-status">
@@ -47,11 +47,10 @@ export default {
     margin: 20px 0 30px 0;
     font-size: 28px;
     color: $text-dark;
-    font-family: $pf-reg;
     font-weight: normal;
   }
   .text {
-    font-size: 24px;
+    font-size: 26px;
     color: $text-lgary;
     margin: 0;
     text-align: center;

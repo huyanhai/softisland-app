@@ -2,7 +2,7 @@
  * @Description: 消息中心
  * @Author: hyh
  * @since: 2019-08-10 20:51:07
- * @lastTime: 2019-08-24 13:11:31
+ * @lastTime: 2019-08-28 14:29:48
  -->
 <template>
   <div class="msg-box">
@@ -22,7 +22,7 @@
       <router-link to="/message/msg-list">
         <div class="col">
           <span class="col-l">
-            <i class="iconfont icon-kefu1"></i>
+            <i class="iconfont icon-kefu"></i>
             <i class="message" v-if="!message">2</i>
           </span>
           <span class="col-r">
@@ -101,6 +101,9 @@ export default {
       ]
     }
   },
+  created () {
+    this.$emit('header', true)
+  },
   methods: {
     toDetail (e) {
       this.$router.push({
@@ -120,70 +123,74 @@ export default {
     overflow: hidden;
     padding: 0 30px;
     margin-bottom: 30px;
-    .col {
-      display: flex;
-      align-items: center;
-      padding: 30px 0;
-      border-bottom: 1px solid $line-red;
-      &:last-child {
-        border: 0;
-      }
-      .col-l {
-        width: 70px;
-        height: 70px;
-        background: $color-fff;
-        border-radius: 70px;
-        flex: 0 0 auto;
-        text-align: center;
-        margin-right: 30px;
-        position: relative;
+    a {
+      .col {
         display: flex;
         align-items: center;
-        justify-content: center;
-        .message {
-          position: absolute;
-          height: 30px;
-          line-height: 30px;
-          display: block;
-          border-radius: 30px;
-          background: $brand-orange;
-          color: $color-fff;
-          font-size: 20px;
-          top: -8px;
-          left: 44px;
-          font-style: normal;
-          padding: 0 10px;
-          transform: scale(0.8);
-        }
-        .iconfont {
-          font-size: 30px;
-          color: $brand-yellow;
-        }
-      }
-      .col-r {
-        flex: 1 0 auto;
-        width: 50%;
-        .name {
-          font-size: 26px;
-          color: $color-fff;
-          margin-bottom: 10px;
-          font-family: $pf-med;
-        }
-        .text {
-          font-size: 24px;
-          color: $color-fff;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          font-family: $pf-light;
-          .num {
-            width: 33.33%;
+        padding: 30px 0;
+        border-bottom: 1px solid $line-red !important;
+
+        .col-l {
+          width: 70px;
+          height: 70px;
+          background: $color-fff;
+          border-radius: 70px;
+          flex: 0 0 auto;
+          text-align: center;
+          margin-right: 30px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .message {
+            position: absolute;
+            height: 30px;
+            line-height: 30px;
+            display: block;
+            border-radius: 30px;
+            background: $brand-orange;
+            color: $color-fff;
+            font-size: 20px;
+            top: -8px;
+            left: 44px;
             font-style: normal;
-            display: inline-block;
+            padding: 0 10px;
+            transform: scale(0.8);
+          }
+          .iconfont {
+            font-size: 36px;
+            color: $brand-yellow;
           }
         }
-        p {
-          margin: 0;
+        .col-r {
+          flex: 1 0 auto;
+          width: 50%;
+          .name {
+            font-size: 26px;
+            color: $color-fff;
+            margin-bottom: 10px;
+          }
+          .text {
+            font-size: 26px;
+            color: $color-fff;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            .num {
+              width: 33.33%;
+              font-style: normal;
+              display: inline-block;
+            }
+          }
+          p {
+            margin: 0;
+          }
+        }
+      }
+      &:last-child {
+        .col {
+          border-bottom: 0 !important;
         }
       }
     }
@@ -242,7 +249,7 @@ export default {
             }
           }
           .text {
-            font-size: 24px;
+            font-size: 26px;
             color: $text-lgary;
             line-height: 40px;
           }
@@ -260,7 +267,7 @@ export default {
       margin-bottom: 20px;
     }
     .text {
-      font-size: 24px;
+      font-size: 26px;
       line-height: 40px;
       color: $text-lgary;
       display: block;

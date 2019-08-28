@@ -2,7 +2,7 @@
  * @Description:我的出租订单
  * @Author: hyh
  * @since: 2019-08-12 22:22:39
- * @lastTime: 2019-08-17 21:04:47
+ * @lastTime: 2019-08-28 14:45:29
  -->
 <template>
   <div class="pages page-sell-order">
@@ -147,7 +147,7 @@ export default {
         display: block;
         position: absolute;
         height: 80%;
-        border-left: 1px solid $line-gary;
+        border-left: 1px dashed $line-gary;
         left: 33.33%;
       }
       &::after {
@@ -155,7 +155,7 @@ export default {
         display: block;
         position: absolute;
         height: 80%;
-        border-right: 1px solid $line-gary;
+        border-right: 1px dashed $line-gary;
         right: 33.33%;
       }
       .repeart-item {
@@ -164,14 +164,12 @@ export default {
         .ui-number {
           font-size: 30px;
           color: $text-dark;
-          font-family: $pf-bold;
           display: block;
           margin-bottom: 20px;
         }
         .text {
-          font-size: 24px;
+          font-size: 26px;
           color: $text-lgary;
-          font-family: $pf-light;
           margin: 0;
         }
       }
@@ -180,7 +178,7 @@ export default {
   .my-all-sell {
     margin: 30px;
     .sell-hd {
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
       display: flex;
       justify-content: center;
@@ -222,7 +220,7 @@ export default {
           margin-bottom: 30px;
         }
         .text {
-          font-size: 24px;
+          font-size: 26px;
           line-height: 40px;
           color: $text-lgary;
         }

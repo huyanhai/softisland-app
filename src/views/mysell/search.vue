@@ -2,7 +2,7 @@
  * @Description:search
  * @Author: hyh
  * @since: 2019-08-13 20:51:32
- * @lastTime: 2019-08-13 22:37:11
+ * @lastTime: 2019-08-28 16:45:33
  -->
 <template>
   <div class="pages page-search">
@@ -78,7 +78,7 @@ export default {
       background: none;
       border: 0;
       outline: 0;
-      font-size: 24px;
+      font-size: 22px;
       flex: 1 0 auto;
     }
   }
@@ -92,7 +92,7 @@ export default {
       text-align: center;
       @include border-radius(60px);
       overflow: hidden;
-      box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+      box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
       background: $brand-red;
       font-size: 26px;
       color: $color-fff;

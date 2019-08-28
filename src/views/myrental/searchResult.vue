@@ -118,7 +118,7 @@ export default {
   .my-all-sell {
     margin: 30px;
     .sell-hd {
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
       display: flex;
       justify-content: center;
@@ -160,7 +160,7 @@ export default {
           margin-bottom: 30px;
         }
         .text {
-          font-size: 24px;
+          font-size: 26px;
           line-height: 40px;
           color: $text-lgary;
         }

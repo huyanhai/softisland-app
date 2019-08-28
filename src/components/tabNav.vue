@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-10 15:20:42
- * @lastTime: 2019-08-10 16:17:26
+ * @lastTime: 2019-08-27 15:00:20
  -->
 <template>
   <div class="tab-nav">
@@ -41,13 +41,14 @@ export default {
     height: 80px;
     line-height: 80px;
     .tab {
-      font-size: 24px;
+      font-size: 26px;
       color: $text-gary;
       float: left;
       width: 120px;
       display: block;
       position: relative;
       &.active {
+        color: $text-dark;
         &::before {
           position: absolute;
           width: 25px;
@@ -66,7 +67,7 @@ export default {
       .no-data {
         min-height: 100px;
         text-align: center;
-        font-size: 24px;
+        font-size: 26px;
         color: $text-lgary;
       }
     }

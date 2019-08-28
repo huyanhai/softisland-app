@@ -2,7 +2,7 @@
  * @Description:step3
  * @Author: hyh
  * @since: 2019-08-14 21:52:28
- * @lastTime: 2019-08-24 17:47:26
+ * @lastTime: 2019-08-28 16:10:50
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -209,22 +209,27 @@ export default {
       color: $text-dark;
       height: 100px;
       line-height: 100px;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       margin-top: 20px;
       overflow: hidden;
       clear: both;
+      font-weight: bold;
       .text-right {
         float: right;
         text-align: right;
+        font-weight: normal;
+        font-weight: bold;
         .text {
-          color: $brand-red;
+          color: $brand-orange;
           font-style: normal;
           font-size: 28px;
+          font-weight: normal;
         }
       }
       .text {
-        font-size: 24px;
+        font-size: 26px;
         color: $text-lgary;
+        font-weight: normal;
       }
       &:first-child {
         margin-top: 0;
@@ -234,20 +239,19 @@ export default {
       }
     }
     .info-bd {
-      padding-bottom: 30px;
       .info-item {
         display: flex;
         align-items: center;
         height: 100px;
         line-height: 100px;
-        border-bottom: 1px solid $line-gary;
+        border-bottom: 1px dashed $line-gary;
         position: relative;
         .sm-tisp {
           position: absolute;
           left: 0;
           bottom: -20px;
           font-size: 20px;
-          color: $brand-yellow;
+          color: $brand-orange;
           line-height: initial;
           font-style: normal;
         }
@@ -275,7 +279,7 @@ export default {
           flex: 1 0 auto;
           margin: 0;
           .text {
-            color: $brand-yellow;
+            color: $brand-orange;
             font-style: normal;
           }
           &.text-right {
@@ -289,21 +293,21 @@ export default {
           display: flex;
           align-items: center;
           .ui-link {
-            font-size: 24px;
-            color: $brand-yellow;
+            font-size: 26px;
+            color: $brand-orange;
             text-decoration: underline;
           }
         }
         .right-text {
           flex: 1 0 auto;
           text-align: right;
-          font-size: 24px;
+          font-size: 26px;
           color: $text-dark;
           width: 50%;
           .ui-txt {
             margin: 0;
             display: inline;
-            color: $brand-yellow;
+            color: $brand-orange;
           }
         }
         .label {
@@ -311,7 +315,7 @@ export default {
           color: $text-lgary;
           width: 150px;
           flex: 0 0 auto;
-          margin-right: 20px;
+          margin-right: 10px;
         }
         .line {
           flex: 1 0 auto;
@@ -349,7 +353,7 @@ export default {
           height: 60px;
           background: $line-gary;
           @include border-radius(60px);
-          font-size: 24px;
+          font-size: 26px;
           color: $text-lgary;
           text-align: center;
           line-height: 60px;
@@ -385,7 +389,7 @@ export default {
         .upload {
           width: 150px;
           height: 150px;
-          border: 1px dashed $line-gary;
+          border: 1px solid #e4e4e4;
           margin-bottom: 20px;
           margin-right: 30px;
           position: relative;
@@ -400,7 +404,7 @@ export default {
           }
           .iconfont {
             position: absolute;
-            color: $brand-yellow;
+            color: $brand-orange;
             top: -14px;
             right: -14px;
             font-size: 30px;
@@ -430,7 +434,7 @@ export default {
     color: $color-fff;
     font-size: 36px;
     background: $brand-red;
-    box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+    box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
     @include border-radius(88px);
     &.step4 {
       width: 690px;
@@ -446,7 +450,7 @@ export default {
     .tisp {
       text-align: center;
       font-size: 20px;
-      color: $brand-yellow;
+      color: $brand-orange;
       margin-top: 30px;
     }
     .van-radio-group {
@@ -458,7 +462,7 @@ export default {
       width: 190px;
       height: 60px;
       color: $text-dark;
-      font-size: 24px;
+      font-size: 26px;
       text-align: center;
       line-height: 60px;
       background: $line-gary;

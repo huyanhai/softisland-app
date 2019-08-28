@@ -2,12 +2,12 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-09 21:29:49
- * @lastTime: 2019-08-17 15:45:11
+ * @lastTime: 2019-08-27 16:25:45
  -->
 <template>
   <div class="nav-bar">
     <div class="bar-box white-bg">
-      <div class="bar-left" @click="onClickLeft">
+      <div class="bar-left" @click="onClickLeft" v-if="!titleHide">
         <slot name="bar-left">
           <i class="iconfont icon-fanhui"></i>
         </slot>
@@ -27,7 +27,13 @@ export default {
   props: {
     barTitle: String,
     leftText: null,
-    rightText: null
+    rightText: null,
+    titleHide: false
+  },
+  data () {
+    return {
+      hideBack: false
+    }
   },
   methods: {
     onClickLeft () {
@@ -67,7 +73,6 @@ export default {
       text-align: center;
       font-size: 34px;
       color: $text-dark;
-      font-family: $pf-reg;
       z-index: 9;
       top: 50%;
       transform: translateY(-50%);
@@ -75,7 +80,7 @@ export default {
     .bar-right {
       z-index: 10;
       .color-red {
-        color: $brand-yellow;
+        color: $brand-orange;
         margin-left: 20px;
       }
     }

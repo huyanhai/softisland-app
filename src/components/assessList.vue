@@ -2,7 +2,7 @@
  * @Description:租赁评价列表
  * @Author: hyh
  * @since: 2019-08-19 20:53:45
- * @lastTime: 2019-08-20 23:42:14
+ * @lastTime: 2019-08-27 17:50:46
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -10,8 +10,8 @@
     <template v-if="dataSet.length>0">
       <div class="assess-list-c" v-for="(item,index) in dataSet" :key="index" @click="toApply">
         <span class="col">
-          <p class="col-l text">订单号：{{item.orderNo}}</p>
-          <p class="col-r text">货架号：{{item.goodsNo}}</p>
+          <p class="col-l text"><em class="name">订单号：</em>{{item.orderNo}}</p>
+          <p class="col-r text"><em class="name">货架号：</em>{{item.goodsNo}}</p>
         </span>
         <span class="col-box">
           <p class="col-list text col-row"><em class="name">租客：</em>{{item.custom}}</p>
@@ -56,7 +56,7 @@ export default {
 .assess-list-c {
   box-sizing: border-box;
   @include border-radius(40px);
-  padding: 0 20px;
+  padding: 20px 30px;
   background: $color-fff;
   overflow: hidden;
   display: block;
@@ -71,7 +71,7 @@ export default {
     bottom: 110px;
     text-align: center;
     line-height: 60px;
-    font-size: 24px;
+    font-size: 26px;
     color: $color-fff;
     @include border-radius(60px);
     display: flex;
@@ -98,10 +98,17 @@ export default {
     display: flex;
     height: 60px;
     line-height: 60px;
-    font-size: 24px;
+    font-size: 26px;
     color: $text-dark;
     justify-content: space-between;
     align-items: center;
+    .col-l,
+    .col-r {
+      .name {
+        color: $text-lgary;
+        font-style: normal;
+      }
+    }
     .text {
       margin: 0;
       width: 50%;
@@ -119,14 +126,13 @@ export default {
     text-align: right;
   }
   .col-box {
-    margin: 10px 0;
     overflow: hidden;
     display: block;
     position: relative;
 
     .col-list {
       width: 100%;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
       line-height: 60px;
       height: 60px;
@@ -161,7 +167,7 @@ export default {
       }
     }
     .line {
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       margin: 20px 0;
       height: 1px;
     }
@@ -186,7 +192,7 @@ export default {
     margin-bottom: 30px;
   }
   .text {
-    font-size: 24px;
+    font-size: 26px;
     line-height: 40px;
     color: $text-lgary;
   }

@@ -2,7 +2,7 @@
  * @Description:操作步骤
  * @Author: hyh
  * @since: 2019-08-13 22:37:58
- * @lastTime: 2019-08-21 23:28:58
+ * @lastTime: 2019-08-27 15:10:22
  -->
 <template>
   <div class="step-box">
@@ -52,7 +52,7 @@ export default {
     &.active {
       .label {
         @include linder-top-bottom($brand-red, $brand-yellow);
-        box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+        box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
         color: $color-fff;
         border: none;
       }
@@ -102,7 +102,7 @@ export default {
     }
     .text {
       margin: 0;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
     }
   }

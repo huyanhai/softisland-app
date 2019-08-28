@@ -2,7 +2,7 @@
  * @Description:card
  * @Author: hyh
  * @since: 2019-08-17 10:13:28
- * @lastTime: 2019-08-21 00:03:51
+ * @lastTime: 2019-08-27 16:57:46
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -47,19 +47,20 @@ export default {
     color: $text-dark;
     height: 100px;
     line-height: 100px;
-    border-bottom: 1px solid $line-gary;
+    border-bottom: 1px dashed $line-gary;
     overflow: hidden;
     clear: both;
     display: flex;
     .label {
       flex: 0 0 auto;
+      font-weight: bold;
     }
     .text {
       flex: 1 0 auto;
       text-align: left;
       width: 50%;
       display: flex;
-      font-size: 24px;
+      font-size: 26px;
     }
   }
   .showhd {
@@ -74,13 +75,16 @@ export default {
       align-items: center;
       height: 80px;
       line-height: 80px;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       position: relative;
+      &:last-child {
+        border-bottom: none;
+      }
       .pro-ab-link {
         position: absolute;
         right: 0;
-        color: $brand-yellow;
-        font-size: 24px;
+        color: $brand-orange;
+        font-size: 26px;
       }
       &.textarea-item {
         align-items: baseline;
@@ -100,7 +104,7 @@ export default {
         flex: 1 0 auto;
         margin: 0;
         .text {
-          color: $brand-yellow;
+          color: $brand-orange;
           font-style: normal;
         }
         &.text-right {
@@ -114,8 +118,8 @@ export default {
         display: flex;
         align-items: center;
         .ui-link {
-          font-size: 24px;
-          color: $brand-yellow;
+          font-size: 26px;
+          color: $brand-orange;
           text-decoration: underline;
         }
       }
@@ -171,7 +175,7 @@ export default {
         height: 60px;
         background: $line-gary;
         @include border-radius(60px);
-        font-size: 24px;
+        font-size: 26px;
         color: $text-lgary;
         text-align: center;
         line-height: 60px;

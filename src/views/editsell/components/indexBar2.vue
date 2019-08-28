@@ -73,7 +73,7 @@ export default {
   padding: 0 30px;
   overflow: hidden;
   .bar-hd {
-    font-size: 24px;
+    font-size: 26px;
     color: $text-dark;
     height: 80px;
     line-height: 80px;
@@ -105,7 +105,7 @@ export default {
       }
     }
     .text {
-      font-size: 24px;
+      font-size: 26px;
       color: $text-dark;
     }
     .iconfont {
@@ -119,7 +119,7 @@ export default {
       outline: 0;
       flex: 1 0 auto;
       height: 100%;
-      font-size: 24px;
+      font-size: 26px;
       width: 50%;
     }
     .search {
@@ -156,7 +156,7 @@ export default {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 1px solid $line-gary;
+        border-bottom: 1px dashed $line-gary;
         .text {
           font-size: 26px;
           color: $text-gary;
@@ -179,7 +179,7 @@ export default {
           line-height: 80px;
           font-size: 26px;
           color: $text-dark;
-          border-bottom: 1px solid $line-gary;
+          border-bottom: 1px dashed $line-gary;
         }
       }
     }

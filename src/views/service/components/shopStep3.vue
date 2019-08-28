@@ -101,7 +101,7 @@ export default {
         margin: 0 0 20px 0;
       }
       .s-text {
-        font-size: 24px;
+        font-size: 26px;
         color: $text-dark;
         margin: 0;
       }
@@ -119,7 +119,7 @@ export default {
   .message {
     .message-item {
       padding: 0 0 30px 0;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       .msg-hd {
         height: 80px;
         line-height: 80px;

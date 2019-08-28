@@ -2,7 +2,7 @@
  * @Description:购买置顶货架
  * @Author: hyh
  * @since: 2019-08-20 21:35:38
- * @lastTime: 2019-08-23 18:11:07
+ * @lastTime: 2019-08-28 11:33:10
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -192,15 +192,18 @@ export default {
         text-align: right;
         width: 100%;
         font-size: 28px;
+        .color-red {
+          color: $brand-orange;
+        }
         .ui-text {
-          font-size: 24px;
+          font-size: 26px;
           margin: 0;
           width: 100%;
           text-align: right;
           color: $text-gary;
         }
         .ui-link {
-          font-size: 24px;
+          font-size: 26px;
           margin: 0 0 0 20px;
           text-decoration: underline;
           color: $brand-yellow;
@@ -210,7 +213,7 @@ export default {
         margin: 0;
         text-align: left;
         width: 100%;
-        font-size: 24px;
+        font-size: 26px;
       }
     }
     .exsearch-bd1 {
@@ -224,7 +227,7 @@ export default {
         width: 180px;
         height: 60px;
         color: $text-dark;
-        font-size: 24px;
+        font-size: 26px;
         text-align: center;
         line-height: 60px;
         background: $line-gary;
@@ -262,7 +265,7 @@ export default {
     background: $text-gary;
     &.active {
       background: $brand-red;
-      box-shadow: 0 6px 16px rgba($shadow-red, 0.35);
+      box-shadow: 0 4px 5px rgba($shadow-red, 0.35);
     }
   }
   .dialog-bdc {

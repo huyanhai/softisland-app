@@ -52,7 +52,7 @@ export default {
     height: 80px;
     .col {
       width: 20%;
-      font-size: 24px;
+      font-size: 26px;
       color: $text-lgary;
       text-align: center;
       &:first-child {
@@ -81,10 +81,10 @@ export default {
         flex-direction: row;
         width: 100%;
         margin: 0;
-        border-bottom: 1px solid $line-gary;
+        border-bottom: 1px dashed $line-gary;
         .col {
           width: 20%;
-          font-size: 24px;
+          font-size: 26px;
           color: $text-lgary;
           text-align: center;
           &:first-child {

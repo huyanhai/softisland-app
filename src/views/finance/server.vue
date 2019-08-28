@@ -2,7 +2,7 @@
  * @Description:我的财务
  * @Author: hyh
  * @since: 2019-08-12 22:22:39
- * @lastTime: 2019-08-23 22:15:17
+ * @lastTime: 2019-08-28 16:29:43
  -->
 <template>
   <div class="pages page-finance-server">
@@ -13,8 +13,8 @@
         <p class="number">0</p>
       </div>
       <div class="col">
-        <i class="iconfont icon-shouru"></i>
-        <p class="text">总收入(元)</p>
+        <i class="iconfont icon-zhichu"></i>
+        <p class="text">总支出(元)</p>
         <p class="number">0</p>
       </div>
     </div>
@@ -57,12 +57,23 @@ export default {
         xAxis: {
           categories: ['2月', '3月', '4月', '5月', '6月', '7月'],
           dashStyle: 'shortdot',
-          legend: false
-
+          legend: false,
+          lineColor: '#f3f3f3',
+          labels: {
+            style: {
+              color: '#999999'
+            }
+          }
         },
         yAxis: {
           dashStyle: 'shortdot',
-          title: null
+          title: null,
+          lineColor: '#f3f3f3',
+          labels: {
+            style: {
+              color: '#999999'
+            }
+          }
         },
         series: [{
           name: '收入',
@@ -156,7 +167,7 @@ export default {
         display: block;
         position: absolute;
         height: 80%;
-        border-left: 1px solid $line-gary;
+        border-left: 1px dashed $line-gary;
         left: 50%;
       }
       .repeart-item {
@@ -166,14 +177,12 @@ export default {
         .ui-number {
           font-size: 30px;
           color: $text-dark;
-          font-family: $pf-bold;
           display: block;
           margin-bottom: 20px;
         }
         .text {
-          font-size: 24px;
+          font-size: 26px;
           color: $text-lgary;
-          font-family: $pf-light;
           margin: 0;
         }
       }
@@ -190,7 +199,7 @@ export default {
       justify-content: center;
       font-size: 26px;
       color: $text-dark;
-      border-bottom: 1px solid $line-gary;
+      border-bottom: 1px dashed $line-gary;
       &:last-child {
         border-bottom: none;
       }
@@ -201,6 +210,10 @@ export default {
       }
       .text {
         flex: 1 0 auto;
+        font-weight: bold;
+      }
+      .number {
+        font-weight: bold;
       }
     }
   }
@@ -220,7 +233,7 @@ export default {
         margin-bottom: 30px;
       }
       .text {
-        font-size: 24px;
+        font-size: 26px;
         line-height: 40px;
         color: $text-lgary;
       }

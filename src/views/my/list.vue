@@ -2,7 +2,7 @@
  * @Description: 我的17租号
  * @Author: hyh
  * @since: 2019-08-24 13:34:51
- * @lastTime: 2019-08-24 19:00:53
+ * @lastTime: 2019-08-26 17:09:55
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -75,7 +75,6 @@ export default {
         font-size: 26px;
         flex: 1 0 auto;
         margin-left: 30px;
-        font-family: $pf-reg;
         line-height: 40px;
         .red {
           color: $brand-red;

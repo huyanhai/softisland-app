@@ -2,7 +2,7 @@
  * @Description:消息通知
  * @Author: hyh
  * @since: 2019-08-10 20:51:07
- * @lastTime: 2019-08-24 09:49:05
+ * @lastTime: 2019-08-27 17:15:06
  -->
 <template>
   <div class="pages page-message-datail">
@@ -47,6 +47,7 @@ export default {
   },
   created () {
     this.$emit('footer', false)
+    this.$emit('header', false)
   },
   destroyed () {
     this.$emit('footer', true)
