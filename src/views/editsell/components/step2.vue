@@ -2,7 +2,7 @@
  * @Description:step1
  * @Author: hyh
  * @since: 2019-08-14 21:52:28
- * @lastTime: 2019-08-28 14:58:42
+ * @lastTime: 2019-08-29 10:36:57
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -26,6 +26,76 @@
         <li class="info-item">
           <span class="label">游戏角色</span>
           <input class="ui-input" type="text" name="" v-model="stepTwoData.gameRorl" placeholder="请输入角色名称">
+        </li>
+      </ul>
+      <div class="info-hd">游戏账号附属属性</div>
+      <ul class="info-bd">
+        <li class="info-item" @click="goChoose">
+          <span class="label">单双排段位</span>
+          <input class="ui-input" disabled type="text" name="" v-model="stepTwoData.ifFrom" placeholder="请选择">
+          <i class="iconfont icon-fanhui"></i>
+        </li>
+        <li class="info-item" @click="goChoose">
+          <span class="label">灵活排段位</span>
+          <input class="ui-input" disabled type="text" name="" v-model="stepTwoData.ifFrom" placeholder="请选择">
+          <i class="iconfont icon-fanhui"></i>
+        </li>
+        <li class="info-item" @click="goChoose">
+          <span class="label">头像框</span>
+          <input class="ui-input" disabled type="text" name="" v-model="stepTwoData.ifFrom" placeholder="请选择">
+          <i class="iconfont icon-fanhui"></i>
+        </li>
+        <li class="info-item" @click="goChoose">
+          <span class="label">信誉积分</span>
+          <input class="ui-input" disabled type="text" name="" v-model="stepTwoData.ifFrom" placeholder="请选择">
+          <i class="iconfont icon-fanhui"></i>
+        </li>
+        <li class="info-item" @click="goChoose">
+          <span class="label">实名认证</span>
+          <input class="ui-input" disabled type="text" name="" v-model="stepTwoData.ifFrom" placeholder="请选择">
+          <i class="iconfont icon-fanhui"></i>
+        </li>
+        <li class="info-item" @click="goChoose">
+          <span class="label">游戏疲劳值</span>
+          <input class="ui-input" disabled type="text" name="" v-model="stepTwoData.ifFrom" placeholder="请选择">
+          <i class="iconfont icon-fanhui"></i>
+        </li>
+        <li class="info-item" @click="goChoose">
+          <span class="label">适用手机机型</span>
+          <input class="ui-input" disabled type="text" name="" v-model="stepTwoData.ifFrom" placeholder="请选择">
+          <i class="iconfont icon-fanhui"></i>
+        </li>
+        <li class="info-item">
+          <span class="label">英雄数量</span>
+          <input class="ui-input" type="text" name="" v-model="stepTwoData.gameAcc" placeholder="请输入">
+        </li>
+        <li class="info-item">
+          <span class="label">皮肤数量</span>
+          <input class="ui-input" type="text" name="" v-model="stepTwoData.gameAcc" placeholder="请输入">
+        </li>
+        <li class="info-item">
+          <span class="label">安全问题答案</span>
+          <input class="ui-input" type="text" name="" v-model="stepTwoData.gameAcc" placeholder="请输入">
+        </li>
+        <li class="info-item">
+          <span class="label">士兵数量</span>
+          <input class="ui-input" type="text" name="" v-model="stepTwoData.gameAcc" placeholder="请输入">
+        </li>
+        <li class="info-item">
+          <span class="label">粮食数量</span>
+          <input class="ui-input" type="text" name="" v-model="stepTwoData.gameAcc" placeholder="请输入">
+        </li>
+        <li class="info-item">
+          <span class="label">神兵值</span>
+          <input class="ui-input" type="text" name="" v-model="stepTwoData.gameAcc" placeholder="请输入">
+        </li>
+        <li class="info-item">
+          <span class="label">平台账号</span>
+          <input class="ui-input" type="text" name="" v-model="stepTwoData.gameAcc" placeholder="请输入">
+        </li>
+        <li class="info-item">
+          <span class="label">平台密码</span>
+          <input class="ui-input" type="text" name="" v-model="stepTwoData.gameAcc" placeholder="请输入">
         </li>
       </ul>
       <div class="info-hd">货架宣传文案</div>
@@ -124,7 +194,7 @@ export default {
 .game-info {
   background: $color-fff;
   @include border-radius(40px);
-  margin: 30px 20px 50px 20px;
+  margin: 30px 30px 50px 30px;
   @include box-shdow-gary();
   box-sizing: border-box;
   padding: 0 30px;
@@ -166,7 +236,7 @@ export default {
       .label {
         font-size: 26px;
         color: $text-lgary;
-        width: 130px;
+        width: 170px;
         flex: 0 0 auto;
         margin-right: 10px;
       }

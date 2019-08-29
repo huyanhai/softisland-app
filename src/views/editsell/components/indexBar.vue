@@ -2,11 +2,11 @@
  * @Description:indexBar
  * @Author: hyh
  * @since: 2019-08-14 22:39:03
- * @lastTime: 2019-08-22 15:20:06
+ * @lastTime: 2019-08-29 10:32:40
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
-  <div class="index-bar">
+  <div class="index-bar-c">
     <div class="bar-hd">选择游戏</div>
     <div class="bar-bd">
       <i class="iconfont icon-xingtaiduICON_sousuo---copy"></i>
@@ -74,7 +74,7 @@ export default {
 </script>
 <style lang="scss">
 @import "../../../assets/scss/index";
-.index-bar {
+.index-bar-c {
   margin: 0 30px 20px 30px;
   background: $color-fff;
   @include border-radius(40px);

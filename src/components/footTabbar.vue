@@ -2,7 +2,7 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-08 22:26:05
- * @lastTime: 2019-08-27 15:30:22
+ * @lastTime: 2019-08-29 10:59:03
  -->
 <template>
   <van-tabbar v-model="active" class="footer-tab-bar" :active-color="activeColor" :inactive-color="inactiveColor" safe-area-inset-bottom>
@@ -57,6 +57,7 @@ export default {
 <style lang="scss">
 @import "../assets/scss/index";
 .footer-tab-bar {
+  z-index: 100 !important;
   .ui-icon {
     font-size: 40px;
   }

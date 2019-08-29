@@ -2,24 +2,29 @@
  * @Description: 我的黑名单
  * @Author: hyh
  * @since: 2019-08-23 22:23:31
- * @lastTime: 2019-08-27 16:31:45
+ * @lastTime: 2019-08-29 14:05:10
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
-  <div class="pages page-black-list">
-    <div class="search-box white-bg">
-      <div class="search">
-        <i class="iconfont icon-xingtaiduICON_sousuo---copy"></i>
-        <input type="text" class="ui-input" name="" placeholder="试试输入游戏名称/角色名/货架号">
-        <a class="link">搜索</a>
+  <refreshPage :headHeight="headHeight" :theme="theme">
+    <template slot="refresh-box">
+      <div class="pages page-black-list">
+        <div class="search-box white-bg">
+          <div class="search">
+            <i class="iconfont icon-xingtaiduICON_sousuo---copy"></i>
+            <input type="text" class="ui-input" name="" placeholder="试试输入游戏名称/角色名/货架号">
+            <a class="link">搜索</a>
+          </div>
+        </div>
+        <blackLists :dataSet="dataSet" :showLoad="showLoad" />
       </div>
-    </div>
-    <blackLists :dataSet="dataSet" :showLoad="showLoad" />
-  </div>
+    </template>
+  </refreshPage>
 </template>
 
 <script>
 import blackLists from '@/components/blackLists'
+import refreshPage from '@/components/refreshPage.vue'
 export default {
   name: 'blackList',
   data () {
@@ -40,11 +45,24 @@ export default {
           reson: '拉黑时填写的理由，此处文案最大可能会有30个字，所以如果单行显示不完，可以进行换行。'
         }
       ],
-      showLoad: true
+      showLoad: true,
+      isLoading: false,
+      headHeight: 70,
+      theme: 'black'
     }
   },
   components: {
-    blackLists
+    blackLists,
+    refreshPage
+  },
+  methods: {
+    onRefresh () {
+      let _this = this
+      setTimeout(() => {
+        _this.$toast('刷新成功')
+        _this.isLoading = false
+      }, 1000)
+    }
   }
 }
 </script>

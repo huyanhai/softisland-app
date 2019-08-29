@@ -2,11 +2,11 @@
  * @Description:选择游戏
  * @Author: hyh
  * @since: 2019-08-14 22:06:35
- * @lastTime: 2019-08-15 23:26:38
+ * @lastTime: 2019-08-29 10:31:15
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
-  <div class="pages page-choose-game">
+  <div class="pages page-choose-address">
     <headBar :barTitle="barTitle">
       <div class="choose-btn" slot="right">
         <a class="ui-link" @click="nextStep">完成</a>
@@ -41,7 +41,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "../../assets/scss/index";
-.page-choose-game {
+.page-choose-address {
   overflow: hidden;
   padding-bottom: 0;
   .choose-btn {

@@ -2,7 +2,7 @@
  * @Description:我的出租账号
  * @Author: hyh
  * @since: 2019-08-12 22:22:39
- * @lastTime: 2019-08-28 14:45:53
+ * @lastTime: 2019-08-28 17:13:44
  -->
 <template>
   <div class="pages page-sell">
@@ -47,6 +47,7 @@
         </div>
       </div>
     </div>
+    <a class="link">发布账号</a>
   </div>
 </template>
 
@@ -111,7 +112,6 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/scss/index";
 .page-sell {
-  padding-bottom: 0;
   .acc-data-info {
     box-sizing: border-box;
     @include border-radius(40px);
@@ -185,6 +185,17 @@ export default {
         margin-top: 30px;
       }
     }
+  }
+  .link {
+    height: 98px;
+    line-height: 98px;
+    text-align: center;
+    font-size: 32px;
+    color: $color-fff;
+    background: $brand-red;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
 }
 </style>

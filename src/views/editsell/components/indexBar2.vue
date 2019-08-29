@@ -2,11 +2,11 @@
  * @Description:indexBar
  * @Author: hyh
  * @since: 2019-08-14 22:39:03
- * @lastTime: 2019-08-22 15:20:13
+ * @lastTime: 2019-08-29 10:33:32
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
-  <div class="index-bar">
+  <div class="index-bar-c1">
     <div class="bar-hd address-bar-hd">定位到的位置</div>
     <div class="bar-bd address-bar-bd">
       <i class="iconfont icon-dingwei"></i>
@@ -64,7 +64,7 @@ export default {
 </script>
 <style lang="scss">
 @import "../../../assets/scss/index";
-.index-bar {
+.index-bar-c1 {
   margin: 0 30px 20px 30px;
   background: $color-fff;
   @include border-radius(40px);

@@ -2,64 +2,70 @@
  * @Description:
  * @Author: hyh
  * @since: 2019-08-08 14:16:02
- * @lastTime: 2019-08-26 17:11:08
+ * @lastTime: 2019-08-29 13:56:57
  -->
 <template>
   <div class="pages page-index">
     <div class="ui-pagebg"></div>
-    <user-info />
-    <div class="acc-data-info white-bg">
-      <ul class="ui-repeart">
-        <li class="repeart-item">
-          <span class="ui-number">320</span>
-          <p class="text">在架商品数（件）</p>
-        </li>
-        <li class="repeart-item">
-          <span class="ui-number">100</span>
-          <p class="text">出租中账号(个）</p>
-        </li>
-        <li class="repeart-item">
-          <span class="ui-number">20</span>
-          <p class="text">今日租客（户）</p>
-        </li>
-        <li class="repeart-item">
-          <span class="ui-number">5100.00</span>
-          <p class="text">今日收入(元）</p>
-        </li>
-      </ul>
-    </div>
-    <div class="equity-list">
-      <ul class="ui-repeart">
-        <li class="repeart-item white-bg">
-          <span class="icon-bg">
-            <i class="iconfont ui-icon icon-shanghuliebiao"></i>
-          </span>
-          <p class="text" v-if="accInfo.isMerchant">商户剩余时长：<em class="red">15</em> 天</p>
-          <p class="text" v-else>成为商户立享无限上架等特权</p>
-          <a class="link cborder">立即开通</a>
-        </li>
-        <li class="repeart-item white-bg">
-          <span class="icon-bg">
-            <i class="iconfont ui-icon icon-tousu"></i>
-          </span>
-          <p class="text" v-if="accInfo.isComplaint">您存在账号投诉<em class="red">(27条)</em></p>
-          <p class="text" v-else>您的账号尚未存在投诉情况</p>
-          <a class="link cborder">前往查看</a>
-        </li>
-        <li class="repeart-item white-bg">
-          <span class="icon-bg">
-            <i class="iconfont ui-icon icon-naozhongshijianjishitixingxianshitongzhimianxing"></i>
-          </span>
-          <p class="text" v-if="accInfo.isRank">限时货架（货架：12312312)<br>剩余时长：<em class="red">15</em> 天</p>
-          <p class="text" v-else>开通限时货架排名立即靠前</p>
-          <a class="link cborder">立即开通</a>
-        </li>
-      </ul>
-    </div>
+    <refreshPage>
+      <template slot="refresh-box">
+        <user-info />
+        <div class="acc-data-info white-bg">
+          <ul class="ui-repeart">
+            <li class="repeart-item">
+              <span class="ui-number">320</span>
+              <p class="text">在架商品数（件）</p>
+            </li>
+            <li class="repeart-item">
+              <span class="ui-number">100</span>
+              <p class="text">出租中账号(个）</p>
+            </li>
+            <li class="repeart-item">
+              <span class="ui-number">20</span>
+              <p class="text">今日租客（户）</p>
+            </li>
+            <li class="repeart-item">
+              <span class="ui-number">5100.00</span>
+              <p class="text">今日收入(元）</p>
+            </li>
+          </ul>
+        </div>
+        <div class="equity-list">
+          <ul class="ui-repeart">
+            <li class="repeart-item white-bg">
+              <span class="icon-bg">
+                <i class="iconfont ui-icon icon-shanghuliebiao"></i>
+              </span>
+              <p class="text" v-if="accInfo.isMerchant">商户剩余时长：<em class="red">15</em> 天</p>
+              <p class="text" v-else>成为商户立享无限上架等特权</p>
+              <a class="link cborder">立即开通</a>
+            </li>
+            <li class="repeart-item white-bg">
+              <span class="icon-bg">
+                <i class="iconfont ui-icon icon-tousu"></i>
+              </span>
+              <p class="text" v-if="accInfo.isComplaint">您存在账号投诉<em class="red">(27条)</em></p>
+              <p class="text" v-else>您的账号尚未存在投诉情况</p>
+              <a class="link cborder">前往查看</a>
+            </li>
+            <li class="repeart-item white-bg">
+              <span class="icon-bg">
+                <i class="iconfont ui-icon icon-naozhongshijianjishitixingxianshitongzhimianxing"></i>
+              </span>
+              <p class="text" v-if="accInfo.isRank">限时货架（货架：12312312)<br>剩余时长：<em class="red">15</em> 天</p>
+              <p class="text" v-else>开通限时货架排名立即靠前</p>
+              <a class="link cborder">立即开通</a>
+            </li>
+          </ul>
+        </div>
+      </template>
+    </refreshPage>
+
   </div>
 </template>
 <script>
 import userInfo from '@/components/userInfo.vue'
+import refreshPage from '@/components/refreshPage.vue'
 export default {
   name: 'Index',
   data () {
@@ -72,14 +78,18 @@ export default {
     }
   },
   components: {
-    userInfo
+    userInfo,
+    refreshPage
   },
   created () {
     this.$emit('footer', true)
+  },
+  methods: {
+
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../assets/scss/index";
 .page-index {
   overflow: hidden;

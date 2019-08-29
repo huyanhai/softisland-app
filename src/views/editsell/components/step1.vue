@@ -2,7 +2,7 @@
  * @Description:step1
  * @Author: hyh
  * @since: 2019-08-14 21:52:28
- * @lastTime: 2019-08-28 14:52:59
+ * @lastTime: 2019-08-29 10:36:45
  * @如果有bug，那肯定不是我的锅
  -->
 <template>
@@ -65,7 +65,7 @@ export default {
 .game-info {
   background: $color-fff;
   @include border-radius(40px);
-  margin: 30px 20px 50px 20px;
+  margin: 30px 30px 50px 30px;
   @include box-shdow-gary();
   box-sizing: border-box;
   padding: 0 30px;
